@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
+// import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_quizz/screens/quizz_screen.dart';
 import 'package:flutter_quizz/ui/shared/color.dart';
+
 
 class MainMenu extends StatefulWidget {
   const MainMenu({Key? key, required }) : super(key: key);
@@ -76,27 +78,29 @@ class _MainMenuState extends State<MainMenu> {
                   ),
                   const SizedBox(height: 20), // espacio entre los botones
                   // Botón para repasar preguntas
-                  RawMaterialButton(
-                    onPressed: () {
-                      // Aquí puedes agregar la lógica para repasar preguntas
-                    },
-                    shape: const StadiumBorder(),
-                    fillColor: AppColor.secondaryColor,
-                    child: const Padding(
-                      padding: EdgeInsets.symmetric(
-                        vertical: 12.0,
-                        horizontal: 24.0,
-                      ),
-                      child: Text(
-                        "Revisar preguntas",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 26.0,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ),
+                  // RawMaterialButton(
+                  //   onPressed: () {
+                  //     // Aquí puedes agregar la lógica para repasar preguntas
+                  //   },
+                  //   shape: const StadiumBorder(),
+                  //   fillColor: AppColor.secondaryColor,
+                  //   child: const Padding(
+                  //     padding: EdgeInsets.symmetric(
+                  //       vertical: 12.0,
+                  //       horizontal: 24.0,
+                  //     ),
+                  //     child: Text(
+                  //       "Revisar preguntas",
+                  //       style: GoogleFonts.lobster(
+                  //         textStyle: TextStyle(
+                  //           color: Colors.white,
+                  //           fontSize: 26.0,
+                  //           fontWeight: FontWeight.bold
+                  //         ),
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ),
                 ],
               ),
             ),
@@ -104,7 +108,7 @@ class _MainMenuState extends State<MainMenu> {
               child: Text(
                 "Más que un Colegio, una  Gran Familia",
                 textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.white, fontFamily:'BodoniModa'),
+                style: TextStyle(color: Colors.white, fontFamily: 'arial black'),
               ),
             ),
           ],
