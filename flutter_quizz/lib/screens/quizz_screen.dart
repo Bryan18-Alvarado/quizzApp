@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_quizz/data/questions_example.dart';
-import 'package:flutter_quizz/screens/result_screen.dart';
-import 'package:flutter_quizz/ui/shared/color.dart';
-import 'package:flutter_quizz/widgets/quizz_widget.dart';
-import 'package:flutter_quizz/model/question_model.dart';
+import 'package:tiedepeli/data/questions_example.dart';
+import 'package:tiedepeli/screens/result_screen.dart';
+import 'package:tiedepeli/ui/shared/color.dart';
+import 'package:tiedepeli/widgets/quizz_widget.dart';
+import 'package:tiedepeli/model/question_model.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class QuizzScreen extends StatefulWidget {
@@ -78,6 +78,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
                       textStyle:Theme.of(context).textTheme.displayLarge,
                         color: Colors.white,
                         fontSize: 22.0,
+                        
                       
                     )),
                   ),

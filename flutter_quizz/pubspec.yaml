@@ -1,4 +1,4 @@
-name: flutter_quizz
+name: tiedepeli
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -33,7 +33,9 @@ dependencies:
 
   # cupertino_icons: ^2.1.0
 
+  get: ^4.6.6
   google_fonts: ^6.2.1
+  material_design_icons_flutter: ^7.0.7296
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.

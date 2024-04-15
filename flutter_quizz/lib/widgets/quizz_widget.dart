@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_quizz/model/question_model.dart';
-import 'package:flutter_quizz/ui/shared/color.dart';
+import 'package:tiedepeli/model/question_model.dart';
+import 'package:tiedepeli/ui/shared/color.dart';
 
 Widget questionWidget(
     QuestionModel questionModel, void Function() function, bool presed) {

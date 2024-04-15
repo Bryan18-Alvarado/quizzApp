@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_quizz/screens/main_menu.dart';
+import 'package:tiedepeli/screens/main_menu.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,7 +10,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(     
+    return MaterialApp(  
+      debugShowCheckedModeBanner: false,   
       home: const MainMenu(),
     );
   }

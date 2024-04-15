@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_quizz/screens/main_menu.dart';
-import 'package:flutter_quizz/ui/shared/color.dart';
+import 'package:tiedepeli/screens/main_menu.dart';
+import 'package:tiedepeli/ui/shared/color.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ResultScreen extends StatefulWidget {

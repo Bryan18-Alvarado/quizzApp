@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_quizz/screens/quizz_screen.dart';
-import 'package:flutter_quizz/ui/shared/color.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:tiedepeli/screens/quizz_screen.dart';
+import 'package:tiedepeli/ui/shared/color.dart';
+// import 'package:google_fonts/google_fonts.dart';
 
 class MainMenu extends StatefulWidget {
   const MainMenu({Key? key, required}) : super(key: key);
@@ -108,7 +108,6 @@ class _MainMenuState extends State<MainMenu> {
             Center(
               child: Text(
                 "Más que un Colegio, una  Gran Familia",
-                
                 textAlign: TextAlign.center,
                 style: GoogleFonts.abel(
                 textStyle: Theme.of(context).textTheme.displayLarge,
