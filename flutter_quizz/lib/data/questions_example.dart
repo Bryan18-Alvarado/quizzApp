@@ -1,22 +1,23 @@
-import 'package:flutter_quizz/model/question_model.dart';
+import 'package:tiedepeli/model/question_model.dart';
 // import 'package:quizz_app/screens/review_quizz.dart';
-import 'package:flutter_quizz/data/questions_example.dart';
+import 'package:tiedepeli/data/questions_example.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
+
 
 
 List<QuestionModel> questions = [
   QuestionModel(
     "¿Qué estudia la biologia celular?",
     {
-      "creación de dispositivos móviles": false,
+      "Estudio de las especies": false,
       "manejo de las enfermedades": false,
       "Estudio de las celulas": true,
-      "enfocada en la reproducción de medicamentos": false,
+      "Enfocada en la reproducción de medicamentos": false,
     },
     
   ),
-  QuestionModel("¿Qué es la unidad básica de la vida?", {
+  QuestionModel("¿cuál es la unidad básica de la vida?", {
     "Tejido": false,
     "Órgano": false,
     "Célula": true,
@@ -29,9 +30,9 @@ List<QuestionModel> questions = [
     "ADN, molécula y célula": false,
   }),
   QuestionModel("¿Cuál es la función de la membrana celular?", {
-    "Controlar el paso de sustancias de la célula": false,
+    "Controlar el paso de sustancias hacia y desde la célula": true,
     "Producir energía para la célula": false,
-    "Almacena información genética": true,
+    "Almacena información genética": false,
     "Sintetizar proteínas": false,
   }),
   QuestionModel("¿Qué tipo de célula es responsable de la fotosíntesis?", {
@@ -117,7 +118,7 @@ List<QuestionModel> questions = [
     "Por transporte activo.": false,
     "Por difusión simple y difusión facilitada": false,
     "Por osmosis.": false,
-    "Por endocitosis y exocitosis": true,
+    "dentro y fuera de la célula a través de los procesos de endocitosis y exocitosis.": true,
   }),
   QuestionModel("¿Qué son las bacterias?", {
     "Hongos microscópicos que pueden causar infecciones.": false,
@@ -135,9 +136,10 @@ List<QuestionModel> questions = [
       }),
   QuestionModel(
       "¿Qué son las células madre?", {
-    "Células con la capacidad de convertirse en variados tipos de células": true,
+    "Células con la capacidad de convertirse en diversos tipos de células": true,
     "Células que se encuentran en la sangre": false,
     "Células que se encuentran en los huesos": false,
+    "ninguna de las anteriores": false,
   }),
 ];
 
