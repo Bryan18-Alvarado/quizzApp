@@ -2,6 +2,7 @@ import 'package:flutter_quizz/model/question_model.dart';
 // import 'package:quizz_app/screens/review_quizz.dart';
 import 'package:flutter_quizz/data/questions_example.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter/material.dart';
 
 
 List<QuestionModel> questions = [

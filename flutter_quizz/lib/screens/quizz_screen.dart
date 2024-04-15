@@ -4,6 +4,7 @@ import 'package:flutter_quizz/screens/result_screen.dart';
 import 'package:flutter_quizz/ui/shared/color.dart';
 import 'package:flutter_quizz/widgets/quizz_widget.dart';
 import 'package:flutter_quizz/model/question_model.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class QuizzScreen extends StatefulWidget {
   const QuizzScreen({Key? key}) : super(key: key);
@@ -55,11 +56,12 @@ class _QuizzScreenState extends State<QuizzScreen> {
                     child: Text(
                       "Pregunta ${index + 1}/20",
                       textAlign: TextAlign.start,
-                      style: TextStyle(
-                        color: Colors.white,
+                      style: GoogleFonts.abel(
+                      textStyle:Theme.of(context).textTheme.displayLarge,
+                        color: Color.fromARGB(255, 230, 228, 88),
                         fontSize: 28.0,
-                      ),
-                    ),
+                      
+                    )),
                   ),
                   Divider(
                     color: Colors.white,
@@ -72,11 +74,12 @@ class _QuizzScreenState extends State<QuizzScreen> {
                     height: 200.0,
                     child: Text(
                       "${questions[index].question}",
-                      style: TextStyle(
+                      style: GoogleFonts.adventPro(
+                      textStyle:Theme.of(context).textTheme.displayLarge,
                         color: Colors.white,
                         fontSize: 22.0,
-                      ),
-                    ),
+                      
+                    )),
                   ),
                   for (int i = 0; i < questions[index].answers!.length; i++)
                     Container(
@@ -111,7 +114,8 @@ class _QuizzScreenState extends State<QuizzScreen> {
                               }
                             : null,
                         child: Text(questions[index].answers!.keys.toList()[i],
-                            style: TextStyle(
+                            style: GoogleFonts.alatsi(
+                            textStyle: Theme.of(context).textTheme.displayLarge,
                               color: Colors.white,
                               fontSize: 18.0,
                             )),
