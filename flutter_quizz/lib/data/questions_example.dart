@@ -1,7 +1,7 @@
 import 'package:flutter_quizz/model/question_model.dart';
 // import 'package:quizz_app/screens/review_quizz.dart';
 import 'package:flutter_quizz/data/questions_example.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 
 
 List<QuestionModel> questions = [
@@ -13,6 +13,7 @@ List<QuestionModel> questions = [
       "Estudio de las celulas": true,
       "enfocada en la reproducción de medicamentos": false,
     },
+    
   ),
   QuestionModel("¿Qué es la unidad básica de la vida?", {
     "Tejido": false,

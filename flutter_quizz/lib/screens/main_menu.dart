@@ -1,12 +1,12 @@
 import 'package:flutter/cupertino.dart';
-// import 'package:google_fonts/google_fonts.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_quizz/screens/quizz_screen.dart';
 import 'package:flutter_quizz/ui/shared/color.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 
 class MainMenu extends StatefulWidget {
-  const MainMenu({Key? key, required }) : super(key: key);
+  const MainMenu({Key? key, required}) : super(key: key);
 
   @override
   _MainMenuState createState() => _MainMenuState();
@@ -33,14 +33,15 @@ class _MainMenuState extends State<MainMenu> {
               color: Colors.green,
             ),
             const SizedBox(height: 20), // espacio entre el icono y los botones
-            const Center(
+            Center(
               child: Text(
-                "Tiedepeli",
-                style: TextStyle(
-                  color: Colors.white,
+                'Tiedepeli',
+                style: GoogleFonts.bodoniModa(
+                  textStyle: Theme.of(context).textTheme.displayLarge,
                   fontSize: 48,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'Montserrat', // Usando la fuente Montserrat
+                  fontWeight: FontWeight.w700,
+                  fontStyle: FontStyle.italic,
+                  color: Colors.white,
                 ),
               ),
             ),
@@ -61,20 +62,20 @@ class _MainMenuState extends State<MainMenu> {
                     },
                     shape: const StadiumBorder(),
                     fillColor: AppColor.secondaryColor,
-                    child: const Padding(
-                      padding: EdgeInsets.symmetric(
-                        vertical: 12.0,
-                        horizontal: 24.0,
-                      ),
-                      child: Text(
-                        "Iniciar BIOQUIZZ",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 26.0,
-                          fontWeight: FontWeight.bold,
+                    child: Padding(
+                        padding: EdgeInsets.symmetric(
+                          vertical: 12.0,
+                          horizontal: 24.0,
                         ),
-                      ),
-                    ),
+                        child: Text(
+                          'Iniciar BIOQUIZZ',
+                          style: GoogleFonts.roboto(
+                            textStyle: Theme.of(context).textTheme.displayLarge,
+                            color: Color.fromARGB(255, 201, 207, 146),
+                            fontSize: 26.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        )),
                   ),
                   const SizedBox(height: 20), // espacio entre los botones
                   // Botón para repasar preguntas
@@ -104,13 +105,17 @@ class _MainMenuState extends State<MainMenu> {
                 ],
               ),
             ),
-            const Center(
+            Center(
               child: Text(
                 "Más que un Colegio, una  Gran Familia",
+                
                 textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.white, fontFamily: 'arial black'),
+                style: GoogleFonts.abel(
+                textStyle: Theme.of(context).textTheme.displayLarge,
+                color: Colors.white,
+                fontSize:18,
               ),
-            ),
+            )),
           ],
         ),
       ),
