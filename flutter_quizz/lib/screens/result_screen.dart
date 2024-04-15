@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_quizz/screens/main_menu.dart';
 import 'package:flutter_quizz/ui/shared/color.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ResultScreen extends StatefulWidget {
   int score;
@@ -25,19 +26,22 @@ class _ResultScreenState extends State<ResultScreen> {
             child: Text(
               "¡Felicidades!",
               textAlign: TextAlign.center,
-              style: TextStyle(
+              style: GoogleFonts.alkatra(
+              textStyle: Theme.of(context). textTheme.displayLarge,
                 color: Colors.white,
                 fontSize: 40.0,
                 fontWeight: FontWeight.bold,
-              ),
-            ),
+              
+            )),
           ),
           SizedBox(
             height: 45.0,
           ),
           Text(
             "Tu puntaje es:",
-            style: TextStyle(color: Colors.white, fontSize: 34.0),
+            style: GoogleFonts.alkatra(
+            textStyle:Theme.of(context).textTheme.displayLarge,
+            color: Colors.white, fontSize: 34.0),
           ),
           SizedBox(
             height: 20.0,
