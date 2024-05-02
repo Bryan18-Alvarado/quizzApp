@@ -95,7 +95,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
                         fillColor: btnPressed
                             ? questions[index].answers!.values.toList()[i]
                                 ? Colors.green
-                                : Colors.red
+                                : Colors.red //TODO: boton de falso o verdadero
                             : AppColor.secondaryColor,
                         onPressed: !answered
                             ? () {
