@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class BiosciencePage extends StatelessWidget {
@@ -11,8 +12,8 @@ class BiosciencePage extends StatelessWidget {
           'Bioscience',
           style: GoogleFonts.alkatra(
               textStyle:
-                  Theme.of(context).textTheme.headline4, // Corregí el estilo
-              color: Colors.black,
+                  Theme.of(context).textTheme.headlineMedium, // Corregí el estilo
+              color: Colors.green[900],
               fontSize: 34.0,
             ),
           ),
@@ -24,9 +25,14 @@ class BiosciencePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [ // Espacio entre "Bioscience" y "Bienvenido"
             Text(
-              'Bienvenido a la página de Bioscience!',
-              style: TextStyle(fontSize: 24.0),
+              'Choose on:',
+              style: GoogleFonts.bodoniModa(
+                fontSize: 20.0,
+                textStyle:
+                 Theme.of(context).textTheme.headline4,
+                ),
               textAlign: TextAlign.center,
+              
             ),
           ],
         ),
