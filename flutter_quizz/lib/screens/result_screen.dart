@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:tiedepeli/screens/main_menu.dart';
 import 'package:tiedepeli/ui/shared/color.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tiedepeli/screens/bioscience.dart';
 
 class ResultScreen extends StatefulWidget {
   int score;
@@ -28,7 +29,8 @@ class _ResultScreenState extends State<ResultScreen> {
               "¡Felicidades!",
               textAlign: TextAlign.center,
               style: GoogleFonts.alkatra(
-                textStyle: Theme.of(context).textTheme.headline4, // Corregí el estilo
+                textStyle:
+                    Theme.of(context).textTheme.headline4, // Corregí el estilo
                 color: Colors.white,
                 fontSize: 40.0,
                 fontWeight: FontWeight.bold,
@@ -41,7 +43,8 @@ class _ResultScreenState extends State<ResultScreen> {
           Text(
             "Tu puntaje es:",
             style: GoogleFonts.alkatra(
-              textStyle: Theme.of(context).textTheme.headline4, // Corregí el estilo
+              textStyle:
+                  Theme.of(context).textTheme.headline4, // Corregí el estilo
               color: Colors.white,
               fontSize: 34.0,
             ),
@@ -89,13 +92,14 @@ class _ResultScreenState extends State<ResultScreen> {
             height: 10.0, // Espacio adicional entre los botones
           ),
           Container(
-            margin: EdgeInsets.only(bottom: 30.0), // Ajuste vertical del botón "Continuar"
+            margin: EdgeInsets.only(
+                bottom: 30.0), // Ajuste vertical del botón "Continuar"
             child: TextButton(
               onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => MainMenu(),
+                    builder: (context) => BiosciencePage(),
                   ),
                 );
               },
@@ -103,9 +107,7 @@ class _ResultScreenState extends State<ResultScreen> {
                 shape: MaterialStateProperty.all<OutlinedBorder>(
                   StadiumBorder(),
                 ),
-                backgroundColor: MaterialStateProperty.all<Color>(
-                Colors.white
-                ),
+                backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
                 padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
                   EdgeInsets.all(18.0),
                 ),
