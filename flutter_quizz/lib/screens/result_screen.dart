@@ -6,6 +6,7 @@ import 'package:tiedepeli/ui/shared/color.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tiedepeli/screens/bioscience.dart';
 
+// ignore: must_be_immutable
 class ResultScreen extends StatefulWidget {
   int score;
   ResultScreen(this.score, {Key? key}) : super(key: key);
