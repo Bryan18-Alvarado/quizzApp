@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tiedepeli/screens/main_menu.dart';
+import 'package:tiedepeli/sciences/anatomia.dart';
+import 'package:tiedepeli/sciences/biociencia.dart';
+import 'package:tiedepeli/sciences/biotecnologia.dart';
 
 class BiosciencePage extends StatelessWidget {
   @override
@@ -38,10 +41,8 @@ class BiosciencePage extends StatelessWidget {
                 Expanded(
                   child: TextButton(
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => MainMenu())
-                      );
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => BiotecnologiaWidget()));
                     },
                     style: ButtonStyle(
                       shape: MaterialStateProperty.all<OutlinedBorder>(
@@ -72,9 +73,9 @@ class BiosciencePage extends StatelessWidget {
                   child: TextButton(
                     onPressed: () {
                       Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => MainMenu())
-                      );
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => AnatomiaWidget()));
                     },
                     style: ButtonStyle(
                       shape: MaterialStateProperty.all<OutlinedBorder>(
@@ -104,7 +105,10 @@ class BiosciencePage extends StatelessWidget {
                 Expanded(
                   child: TextButton(
                     onPressed: () {
-                      // Aquí puedes añadir la navegación para el botón "Ciencia"
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => BiocienciaWidget()));
                     },
                     style: ButtonStyle(
                       shape: MaterialStateProperty.all<OutlinedBorder>(
@@ -120,7 +124,7 @@ class BiosciencePage extends StatelessWidget {
                       ),
                     ),
                     child: Text(
-                      "Ciencia",
+                      "Biociencia",
                       style: TextStyle(color: Colors.black, fontSize: 24),
                     ),
                   ),
