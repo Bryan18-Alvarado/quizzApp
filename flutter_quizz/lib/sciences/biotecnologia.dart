@@ -124,10 +124,65 @@ class ConceptoWidget extends StatelessWidget {
 class TiposWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        'Tipos de Biotecnología',
-        style: TextStyle(fontSize: 24.0),
+    return Scaffold(
+      body: ListView(
+        children: [
+          ListTile(
+            title: Text('Biotecnología roja o médica'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DetalleBiotecnologia(),
+                ),
+              );
+            },
+          ),
+          ListTile(
+            title: Text('Biotecnología verde'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DetalleBiotecnologia(),
+                ),
+              );
+            },
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class DetalleBiotecnologia extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Detalle de Biotecnología'),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Biotecnología roja o médica',
+                style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'La biotecnología roja o médica consiste en la obtención de sustancias y procedimientos que permitan la preservación de la vida humana, curando enfermedades o previniéndolas.',
+                style: TextStyle(fontSize: 16.0),
+              ),
+            ),
+            // Aquí podrías agregar fotos y videos si fuera necesario
+          ],
+        ),
       ),
     );
   }
