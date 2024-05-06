@@ -143,7 +143,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
                       }
                     },
                     shape: StadiumBorder(),
-                    fillColor: Color.fromARGB(255, 138, 11, 102),
+                    fillColor: Color(0xFF8A0B66),
                     padding: EdgeInsets.all(18.0),
                     elevation: 0.0,
                     child: Text(
