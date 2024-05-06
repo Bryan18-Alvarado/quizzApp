@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:tiedepeli/ui/shared/color.dart';
-import 'package:video_player/video_player.dart';
-import 'dart:async';
-import 'package:chewie/chewie.dart';
 
 void main() {
   runApp(MyApp());
