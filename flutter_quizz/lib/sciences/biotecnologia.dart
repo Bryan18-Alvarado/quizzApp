@@ -368,7 +368,7 @@ class QuizzWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Text(
-        'Quizes de Biotecnología',
+        'Quizz de Biotecnología',
         style: TextStyle(fontSize: 24.0),
       ),
     );
