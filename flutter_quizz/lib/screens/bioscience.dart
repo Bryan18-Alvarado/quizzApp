@@ -5,18 +5,19 @@ import 'package:tiedepeli/screens/main_menu.dart';
 import 'package:tiedepeli/sciences/anatomia.dart';
 import 'package:tiedepeli/sciences/biociencia.dart';
 import 'package:tiedepeli/sciences/biotecnologia.dart';
+import 'package:tiedepeli/ui/shared/color.dart';
 
 class BiosciencePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.indigo,
+      backgroundColor: AppColor.pripmaryColor,
       appBar: AppBar(
         title: Text(
           'Bioscience',
           style: GoogleFonts.alkatra(
             textStyle: Theme.of(context).textTheme.headlineMedium,
-            color: Colors.green[900],
+            color: const Color.fromARGB(255, 31, 133, 37),
             fontSize: 34.0,
           ),
         ),
@@ -29,25 +30,32 @@ class BiosciencePage extends StatelessWidget {
             Text(
               'Choose on:',
               style: GoogleFonts.bodoniModa(
-                fontSize: 20.0,
+                fontSize: 40,
                 textStyle: Theme.of(context).textTheme.headline4,
+                color: Color.fromARGB(255, 255, 255, 255),
               ),
               textAlign: TextAlign.center,
             ),
-            SizedBox(height: 20), // Espacio entre "Choose on:" y los botones
+            SizedBox(
+              height: 20,
+            ), // Espacio entre "Choose on:" y los botones
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Expanded(
                   child: TextButton(
                     onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => BiotecnologiaWidget()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => BiotecnologiaWidget()));
                     },
                     style: ButtonStyle(
                       shape: MaterialStateProperty.all<OutlinedBorder>(
                         RoundedRectangleBorder(
-                          borderRadius: BorderRadius.zero,
+                          borderRadius:
+                              BorderRadius.circular(10.0), // Bordes redondeados
+                          side: BorderSide(color: Colors.black), // Borde negro
                         ),
                       ),
                       backgroundColor: MaterialStateProperty.all<Color>(
@@ -80,7 +88,9 @@ class BiosciencePage extends StatelessWidget {
                     style: ButtonStyle(
                       shape: MaterialStateProperty.all<OutlinedBorder>(
                         RoundedRectangleBorder(
-                          borderRadius: BorderRadius.zero,
+                          borderRadius:
+                              BorderRadius.circular(10.0), // Bordes redondeados
+                          side: BorderSide(color: Colors.black), // Borde negro
                         ),
                       ),
                       backgroundColor: MaterialStateProperty.all<Color>(
@@ -113,7 +123,9 @@ class BiosciencePage extends StatelessWidget {
                     style: ButtonStyle(
                       shape: MaterialStateProperty.all<OutlinedBorder>(
                         RoundedRectangleBorder(
-                          borderRadius: BorderRadius.zero,
+                          borderRadius:
+                              BorderRadius.circular(10.0), // Bordes redondeados
+                          side: BorderSide(color: Colors.black), // Borde negro
                         ),
                       ),
                       backgroundColor: MaterialStateProperty.all<Color>(
