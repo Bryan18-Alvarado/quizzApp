@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tiedepeli/screens/quizzBiotecnologia.dart';
 import 'package:tiedepeli/ui/shared/color.dart';
 
 void main() {
@@ -78,7 +79,7 @@ class _BiotecnologiaWidgetState extends State<BiotecnologiaWidget> {
 class ConceptoWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return SingleChildScrollView(
       child: Padding(
         padding: const EdgeInsets.all(20.0),
         child: RichText(
@@ -116,7 +117,8 @@ class ConceptoWidget extends StatelessWidget {
               TextSpan(
                 text:
                     'La biotecnología se basa en los saberes de la química, física, ingeniería, biología, medicina y veterinaria, para emplear los procesos propios de la vida como una herramienta transformadora, aplicada a compuestos y materiales orgánicos e inorgánicos. Ello no siempre implica la modificación genética, de modo que ambos campos no deben confundirse.\n\n',
-                style: TextStyle(color: Colors.grey[700]),
+                style:
+                    TextStyle(color: const Color.fromARGB(255, 255, 255, 255)),
               ),
             ],
           ),
@@ -130,19 +132,26 @@ class TiposWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColor.pripmaryColor,
       body: ListView(
         children: [
+          Divider(
+            color: AppColor.pripmaryColor,
+          ),
           ListTile(
             title: Text(
               'Biotecnología roja o médica',
+              textAlign: TextAlign.center,
               style: TextStyle(
-                fontSize: 18.0, // Tamaño de fuente
+                fontSize: 14, // Tamaño de fuente
+
                 fontWeight: FontWeight.bold, // Peso de la fuente
-                color: const Color.fromARGB(255, 22, 22, 22), // Color del texto
+                color: Color.fromARGB(255, 255, 255, 255), // Color del texto
               ),
             ),
             // Estilo para el ListTile
-            tileColor: Colors.grey[200], // Color de fondo del ListTile
+            tileColor: Color.fromARGB(
+                255, 22, 103, 253), // Color de fondo del ListTile
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
             ),
@@ -155,8 +164,25 @@ class TiposWidget extends StatelessWidget {
               );
             },
           ),
+          Divider(
+            color: AppColor.pripmaryColor,
+          ),
           ListTile(
-            title: Text('Biotecnología verde'),
+            title: Text(
+              'Biotecnología verde o agrícola',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 14, // Tamaño de fuente
+
+                fontWeight: FontWeight.bold, // Peso de la fuente
+                color: Color.fromARGB(255, 255, 255, 255), // Color del texto
+              ),
+            ),
+            tileColor: Color.fromARGB(
+                255, 22, 103, 253), // Color de fondo del ListTile
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
+            ),
             onTap: () {
               Navigator.push(
                 context,
@@ -166,8 +192,165 @@ class TiposWidget extends StatelessWidget {
               );
             },
           ),
+          Divider(
+            color: AppColor.pripmaryColor,
+          ),
           ListTile(
-            title: Text('Biotecnología verde'),
+            title: Text(
+              'Biotecnología azul o marina',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 14, // Tamaño de fuente
+
+                fontWeight: FontWeight.bold, // Peso de la fuente
+                color: Color.fromARGB(255, 255, 255, 255), // Color del texto
+              ),
+            ),
+            tileColor: Color.fromARGB(
+                255, 22, 103, 253), // Color de fondo del ListTile
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
+            ),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DetalleBiotecnologiaAzul(),
+                ),
+              );
+            },
+          ),
+          Divider(
+            color: AppColor.pripmaryColor,
+          ),
+          ListTile(
+            title: Text(
+              'Biotecnología blanca o industrial',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 14, // Tamaño de fuente
+
+                fontWeight: FontWeight.bold, // Peso de la fuente
+                color: Color.fromARGB(255, 255, 255, 255), // Color del texto
+              ),
+            ),
+            tileColor: Color.fromARGB(
+                255, 22, 103, 253), // Color de fondo del ListTile
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
+            ),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DetalleBiotecnologiaBlanca(),
+                ),
+              );
+            },
+          ),
+          Divider(
+            color: AppColor.pripmaryColor,
+          ),
+          ListTile(
+            title: Text(
+              'Biotecnología gris o ecológica',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 14, // Tamaño de fuente
+
+                fontWeight: FontWeight.bold, // Peso de la fuente
+                color: Color.fromARGB(255, 255, 255, 255), // Color del texto
+              ),
+            ),
+            tileColor: Color.fromARGB(
+                255, 22, 103, 253), // Color de fondo del ListTile
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
+            ),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DetalleBiotecnologiaGris(),
+                ),
+              );
+            },
+          ),
+          Divider(
+            color: AppColor.pripmaryColor,
+          ),
+          ListTile(
+            title: Text(
+              'Biotecnología dorada o informática.',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 14, // Tamaño de fuente
+
+                fontWeight: FontWeight.bold, // Peso de la fuente
+                color: Color.fromARGB(255, 255, 255, 255), // Color del texto
+              ),
+            ),
+            tileColor: Color.fromARGB(
+                255, 22, 103, 253), // Color de fondo del ListTile
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
+            ),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DetalleBiotecnologiaDorada(),
+                ),
+              );
+            },
+          ),
+          Divider(
+            color: AppColor.pripmaryColor,
+          ),
+          ListTile(
+            title: Text(
+              'Biotecnología marrón o del desierto.',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 14, // Tamaño de fuente
+
+                fontWeight: FontWeight.bold, // Peso de la fuente
+                color: Color.fromARGB(255, 255, 255, 255), // Color del texto
+              ),
+            ),
+            tileColor: Color.fromARGB(
+                255, 22, 103, 253), // Color de fondo del ListTile
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
+            ),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DetalleBiotecnologiaMarron(),
+                ),
+              );
+            },
+          ),
+          Divider(
+            color: AppColor.pripmaryColor,
+          ),
+          ListTile(
+            title: Text(
+              'Biotecnología naranja o informativa.',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 14, // Tamaño de fuente
+
+                fontWeight: FontWeight.bold, // Peso de la fuente
+                color: Color.fromARGB(255, 255, 255, 255), // Color del texto
+              ),
+            ),
+            tileColor: Color.fromARGB(
+                255, 22, 103, 253), // Color de fondo del ListTile
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
+            ),
             onTap: () {
               Navigator.push(
                 context,
@@ -177,8 +360,25 @@ class TiposWidget extends StatelessWidget {
               );
             },
           ),
+          Divider(
+            color: AppColor.pripmaryColor,
+          ),
           ListTile(
-            title: Text('Biotecnología verde'),
+            title: Text(
+              'Biotecnología amarilla o nutricional. ',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 14, // Tamaño de fuente
+
+                fontWeight: FontWeight.bold, // Peso de la fuente
+                color: Color.fromARGB(255, 255, 255, 255), // Color del texto
+              ),
+            ),
+            tileColor: Color.fromARGB(
+                255, 22, 103, 253), // Color de fondo del ListTile
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
+            ),
             onTap: () {
               Navigator.push(
                 context,
@@ -188,8 +388,25 @@ class TiposWidget extends StatelessWidget {
               );
             },
           ),
+          Divider(
+            color: AppColor.pripmaryColor,
+          ),
           ListTile(
-            title: Text('Biotecnología verde'),
+            title: Text(
+              'Biotecnología púrpura o legal.',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 14, // Tamaño de fuente
+
+                fontWeight: FontWeight.bold, // Peso de la fuente
+                color: Color.fromARGB(255, 255, 255, 255), // Color del texto
+              ),
+            ),
+            tileColor: Color.fromARGB(
+                255, 22, 103, 253), // Color de fondo del ListTile
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
+            ),
             onTap: () {
               Navigator.push(
                 context,
@@ -199,19 +416,25 @@ class TiposWidget extends StatelessWidget {
               );
             },
           ),
-          ListTile(
-            title: Text('Biotecnología verde'),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => DetalleBiotecnologiaVerde(),
-                ),
-              );
-            },
+          Divider(
+            color: AppColor.pripmaryColor,
           ),
           ListTile(
-            title: Text('Biotecnología verde'),
+            title: Text(
+              'Biotecnología negra o bélica.',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 14, // Tamaño de fuente
+
+                fontWeight: FontWeight.bold, // Peso de la fuente
+                color: Color.fromARGB(255, 255, 255, 255), // Color del texto
+              ),
+            ),
+            tileColor: Color.fromARGB(
+                255, 22, 103, 253), // Color de fondo del ListTile
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
+            ),
             onTap: () {
               Navigator.push(
                 context,
@@ -232,8 +455,9 @@ class DetalleBiotecnologia extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Detalle de Biotecnología'),
+        title: Text('Características'),
       ),
+      backgroundColor: AppColor.pripmaryColor,
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -242,7 +466,10 @@ class DetalleBiotecnologia extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Text(
                 'Biotecnología roja o médica',
-                style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                    fontSize: 24.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.green),
                 textAlign: TextAlign.justify, // Justificar el texto
               ),
             ),
@@ -250,8 +477,9 @@ class DetalleBiotecnologia extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Text(
                 'La biotecnología roja o médica consiste en la obtención de sustancias y procedimientos que permitan la preservación de la vida humana, curando enfermedades o previniéndolas.',
-                style: TextStyle(fontSize: 16.0),
-                textAlign: TextAlign.justify, // Justificar el texto
+                style: TextStyle(fontSize: 16.0, color: Colors.white),
+                textAlign: TextAlign.justify,
+                // Justificar el texto
               ),
             ),
             // Imagen centrada
@@ -278,8 +506,9 @@ class DetalleBiotecnologiaVerde extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColor.pripmaryColor,
       appBar: AppBar(
-        title: Text('Detalle de Biotecnología'),
+        title: Text('Características'),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -289,7 +518,10 @@ class DetalleBiotecnologiaVerde extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Text(
                 'Biotecnología verde o agrícola',
-                style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                    fontSize: 24.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.green),
                 textAlign: TextAlign.justify, // Justificar el texto
               ),
             ),
@@ -297,7 +529,7 @@ class DetalleBiotecnologiaVerde extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Text(
                 'Aquella que tiene que ver con el sector agropecuario de la cadena productiva y que busca incidir en la alimentación humana, a través de la obtención de especies más productivas, más resistentes o con nuevas propiedades adicionales.',
-                style: TextStyle(fontSize: 16.0),
+                style: TextStyle(fontSize: 16.0, color: Colors.white),
                 textAlign: TextAlign.justify, // Justificar el texto
               ),
             ),
@@ -320,11 +552,261 @@ class DetalleBiotecnologiaVerde extends StatelessWidget {
   }
 }
 
+class DetalleBiotecnologiaAzul extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppColor.pripmaryColor,
+      appBar: AppBar(
+        title: Text('Características'),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Biotecnología azul o marina',
+                style: TextStyle(
+                    fontSize: 24.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.green),
+                textAlign: TextAlign.justify, // Justificar el texto
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Se dedica a la exploración de los océanos y sus diversos ecosistemas como una fuente posible de materiales biotecnológicos de importancia.',
+                style: TextStyle(fontSize: 16.0, color: Colors.white),
+                textAlign: TextAlign.justify, // Justificar el texto
+              ),
+            ),
+            // Imagen centrada
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Image.network(
+                  'https://cdn0.ecologiaverde.com/es/posts/5/6/5/biotecnologia_azul_que_es_y_para_que_sirve_4565_orig.jpg', // Cambia la ruta según la ubicación de tu imagen
+                  width:
+                      300, // Puedes ajustar el tamaño de la imagen según tus necesidades
+                  alignment: Alignment.center, // Centrar la imagen
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class DetalleBiotecnologiaBlanca extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppColor.pripmaryColor,
+      appBar: AppBar(
+        title: Text('Características'),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Biotecnología blanca o industrial',
+                style: TextStyle(
+                    fontSize: 24.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.green),
+                textAlign: TextAlign.justify, // Justificar el texto
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Es aquella que se interesa por la obtención de energía, materiales o catalizadores aprovechables por el ser humano, tales como biorreactores, biocombustibles, etc.',
+                style: TextStyle(fontSize: 16.0, color: Colors.white),
+                textAlign: TextAlign.justify, // Justificar el texto
+              ),
+            ),
+            // Imagen centrada
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Image.network(
+                  'https://mercado.com.ar/wp/wp-content/uploads/2022/10/bio.png', // Cambia la ruta según la ubicación de tu imagen
+                  width:
+                      300, // Puedes ajustar el tamaño de la imagen según tus necesidades
+                  alignment: Alignment.center, // Centrar la imagen
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class DetalleBiotecnologiaGris extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppColor.pripmaryColor,
+      appBar: AppBar(
+        title: Text('Características'),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Biotecnología gris o ecológica.',
+                style: TextStyle(
+                    fontSize: 24.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.green),
+                textAlign: TextAlign.justify, // Justificar el texto
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'A diferencia de las demás, su principal objetivo es la preservación del medio ambiente, a través del diseño y la producción de soluciones para desastres medioambientales, como la contaminación o los derrames petroleros, entre otros.',
+                style: TextStyle(fontSize: 16.0, color: Colors.white),
+                textAlign: TextAlign.justify, // Justificar el texto
+              ),
+            ),
+            // Imagen centrada
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Image.network(
+                  'https://www.centrobiotecnologia.cl/wp-content/uploads/2019/11/biotecnologia-verde.jpg', // Cambia la ruta según la ubicación de tu imagen
+                  width:
+                      300, // Puedes ajustar el tamaño de la imagen según tus necesidades
+                  alignment: Alignment.center, // Centrar la imagen
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class DetalleBiotecnologiaDorada extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppColor.pripmaryColor,
+      appBar: AppBar(
+        title: Text('Características'),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Biotecnología dorada o informática.',
+                style: TextStyle(
+                    fontSize: 24.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.green),
+                textAlign: TextAlign.justify, // Justificar el texto
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Constituye el ala electrónica e informática de todos estos procesos, que se hermana con la computación para diseñar mecanismos de procesamiento de información de origen biológico.',
+                style: TextStyle(fontSize: 16.0, color: Colors.white),
+                textAlign: TextAlign.justify, // Justificar el texto
+              ),
+            ),
+            // Imagen centrada
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Image.network(
+                  'https://0901.static.prezi.com/preview/v2/3hpk3nffipivqsdmwqgvjv3crt6jc3sachvcdoaizecfr3dnitcq_3_0.png', // Cambia la ruta según la ubicación de tu imagen
+                  width:
+                      300, // Puedes ajustar el tamaño de la imagen según tus necesidades
+                  alignment: Alignment.center, // Centrar la imagen
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class DetalleBiotecnologiaMarron extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppColor.pripmaryColor,
+      appBar: AppBar(
+        title: Text('Características'),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Biotecnología marrón o del desierto.',
+                style: TextStyle(
+                    fontSize: 24.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.green),
+                textAlign: TextAlign.justify, // Justificar el texto
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Al igual que la marina, comprende los desiertos como importantes fuentes de recursos biotecnológicos aprovechables por la humanidad.',
+                style: TextStyle(fontSize: 16.0, color: Colors.white),
+                textAlign: TextAlign.justify, // Justificar el texto
+              ),
+            ),
+            // Imagen centrada
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Image.network(
+                  'https://imgv2-2-f.scribdassets.com/img/document/476834057/original/8273040261/1714397231?v=1', // Cambia la ruta según la ubicación de tu imagen
+                  width:
+                      300, // Puedes ajustar el tamaño de la imagen según tus necesidades
+                  alignment: Alignment.center, // Centrar la imagen
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
 @override
 Widget build(BuildContext context) {
   return Scaffold(
     appBar: AppBar(
-      title: Text('Detalle de Biotecnología'),
+      title: Text('Detalle'),
     ),
     body: SingleChildScrollView(
       child: Column(
@@ -334,7 +816,10 @@ Widget build(BuildContext context) {
             padding: const EdgeInsets.all(8.0),
             child: Text(
               'Biotecnología roja o médica',
-              style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                  fontSize: 24.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white),
             ),
           ),
           Padding(
@@ -367,9 +852,69 @@ class QuizzWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Text(
-        'Quizz de Biotecnología',
-        style: TextStyle(fontSize: 24.0),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Icon(
+            Icons.psychology, // Cambia esto por el icono que desees
+            size: 120, // ajusta este valor según sea necesario
+            color: Colors.white,
+          ),
+          Text(
+            'Quizz de Biotecnología',
+            style: TextStyle(
+              fontSize: 24.0,
+              color: Color.fromARGB(255, 199, 212, 75),
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          SizedBox(height: 40), // Añade un espacio entre el texto y los botones
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                // Utiliza Navigator.push para navegar a QuizzAnatomia
+                context,
+                MaterialPageRoute(builder: (context) => QuizzBiotecnologia()),
+              );
+            },
+            child: Text(
+              'Nivel 1',
+              style: TextStyle(
+                fontSize: 24.0,
+                color: Colors.blue,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          SizedBox(height: 20), // Añade un espacio entre los botones
+          ElevatedButton(
+            onPressed: () {
+              // Lógica para redirigir a la segunda interfaz
+            },
+            child: Text(
+              'Nivel 2',
+              style: TextStyle(
+                fontSize: 24.0,
+                color: Colors.blue,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          SizedBox(height: 20), // Añade un espacio entre los botones
+          ElevatedButton(
+            onPressed: () {
+              // Lógica para redirigir a la tercera interfaz
+            },
+            child: Text(
+              'Nivel 3',
+              style: TextStyle(
+                fontSize: 24.0,
+                color: Colors.blue,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
