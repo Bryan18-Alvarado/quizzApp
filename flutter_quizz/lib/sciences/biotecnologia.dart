@@ -355,7 +355,7 @@ class TiposWidget extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => DetalleBiotecnologiaVerde(),
+                  builder: (context) => DetalleBiotecnologiaNaranja(),
                 ),
               );
             },
@@ -383,7 +383,7 @@ class TiposWidget extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => DetalleBiotecnologiaVerde(),
+                  builder: (context) => DetalleBiotecnologiaAmarilla(),
                 ),
               );
             },
@@ -411,7 +411,7 @@ class TiposWidget extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => DetalleBiotecnologiaVerde(),
+                  builder: (context) => DetalleBiotecnologiaPurpura(),
                 ),
               );
             },
@@ -439,7 +439,7 @@ class TiposWidget extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => DetalleBiotecnologiaVerde(),
+                  builder: (context) => DetalleBiotecnologiaNegra(),
                 ),
               );
             },
@@ -789,6 +789,206 @@ class DetalleBiotecnologiaMarron extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: Image.network(
                   'https://imgv2-2-f.scribdassets.com/img/document/476834057/original/8273040261/1714397231?v=1', // Cambia la ruta según la ubicación de tu imagen
+                  width:
+                      300, // Puedes ajustar el tamaño de la imagen según tus necesidades
+                  alignment: Alignment.center, // Centrar la imagen
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class DetalleBiotecnologiaNaranja extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppColor.pripmaryColor,
+      appBar: AppBar(
+        title: Text('Características'),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Biotecnología naranja o informativa',
+                style: TextStyle(
+                    fontSize: 24.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.green),
+                textAlign: TextAlign.justify, // Justificar el texto
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Cumple con una función divulgativa y pedagógica, al transmitir de la mejor manera posible las actividades benéficas de la biotecnología, y también educar sobre sus riesgos.',
+                style: TextStyle(fontSize: 16.0, color: Colors.white),
+                textAlign: TextAlign.justify, // Justificar el texto
+              ),
+            ),
+            // Imagen centrada
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Image.network(
+                  'https://img.freepik.com/vector-premium/biotecnologia-bioquimica-genetica-medicina-concepto_531521-231.jpg?w=1060', // Cambia la ruta según la ubicación de tu imagen
+                  width:
+                      300, // Puedes ajustar el tamaño de la imagen según tus necesidades
+                  alignment: Alignment.center, // Centrar la imagen
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class DetalleBiotecnologiaAmarilla extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppColor.pripmaryColor,
+      appBar: AppBar(
+        title: Text('Características'),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Biotecnología naranja o informativa',
+                style: TextStyle(
+                    fontSize: 24.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.green),
+                textAlign: TextAlign.justify, // Justificar el texto
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Aquella que se dedica a la industria alimentaria, o sea, a la obtención de alimentos más sanos, resistentes, nutritivos y/o sabrosos, mediante la incorporación de elementos de origen biológico.',
+                style: TextStyle(fontSize: 16.0, color: Colors.white),
+                textAlign: TextAlign.justify, // Justificar el texto
+              ),
+            ),
+            // Imagen centrada
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Image.network(
+                  'https://elbiotecnologocurioso.com/wp-content/uploads/2020/04/biotecnologia-amarilla.png', // Cambia la ruta según la ubicación de tu imagen
+                  width:
+                      300, // Puedes ajustar el tamaño de la imagen según tus necesidades
+                  alignment: Alignment.center, // Centrar la imagen
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class DetalleBiotecnologiaPurpura extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppColor.pripmaryColor,
+      appBar: AppBar(
+        title: Text('Características'),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Biotecnología púrpura o legal.',
+                style: TextStyle(
+                    fontSize: 24.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.green),
+                textAlign: TextAlign.justify, // Justificar el texto
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Consiste en la rama legal, jurídica y ética del conjunto de la biotecnología, encargada de regular las actividades de las demás ramas para que se lleven a cabo de manera ética.',
+                style: TextStyle(fontSize: 16.0, color: Colors.white),
+                textAlign: TextAlign.justify, // Justificar el texto
+              ),
+            ),
+            // Imagen centrada
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Image.network(
+                  'https://elbiotecnologocurioso.com/wp-content/uploads/2021/04/biotecnologia-violeta.png', // Cambia la ruta según la ubicación de tu imagen
+                  width:
+                      300, // Puedes ajustar el tamaño de la imagen según tus necesidades
+                  alignment: Alignment.center, // Centrar la imagen
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class DetalleBiotecnologiaNegra extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppColor.pripmaryColor,
+      appBar: AppBar(
+        title: Text('Características'),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Biotecnología negra o bélica.',
+                style: TextStyle(
+                    fontSize: 24.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.green),
+                textAlign: TextAlign.justify, // Justificar el texto
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'La más peligrosa de todas y la más inmoral, es la que concierne al desarrollo de armas biológicas, destinadas a la guerra o al bioterrorismo. Sus consecuencias bien pueden ser catastróficas e impredecibles.',
+                style: TextStyle(fontSize: 16.0, color: Colors.white),
+                textAlign: TextAlign.justify, // Justificar el texto
+              ),
+            ),
+            // Imagen centrada
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Image.network(
+                  'https://www.elciudadano.com/wp-content/uploads/2015/07/armas-bacteriologicas.jpg', // Cambia la ruta según la ubicación de tu imagen
                   width:
                       300, // Puedes ajustar el tamaño de la imagen según tus necesidades
                   alignment: Alignment.center, // Centrar la imagen
