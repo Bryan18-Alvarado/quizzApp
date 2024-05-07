@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tiedepeli/screens/main_menu.dart';
 import 'package:tiedepeli/sciences/anatomia.dart';
-import 'package:tiedepeli/sciences/biociencia.dart';
+import 'package:tiedepeli/sciences/Genetica.dart';
 import 'package:tiedepeli/sciences/biotecnologia.dart';
 import 'package:tiedepeli/ui/shared/color.dart';
 
@@ -118,7 +118,7 @@ class BiosciencePage extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => BiocienciaWidget()));
+                              builder: (context) => GeneticaWidget()));
                     },
                     style: ButtonStyle(
                       shape: MaterialStateProperty.all<OutlinedBorder>(
@@ -136,7 +136,7 @@ class BiosciencePage extends StatelessWidget {
                       ),
                     ),
                     child: Text(
-                      "Biociencia",
+                      "Genética",
                       style: TextStyle(color: Colors.black, fontSize: 24),
                     ),
                   ),

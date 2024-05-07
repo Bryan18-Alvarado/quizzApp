@@ -37,7 +37,9 @@ class _QuizzAnatomiaState extends State<QuizzAnatomia> {
           onPageChanged: (page) {
             setState(() {
               questionPos = page;
-              btnText = (page == questions.length - 1) ? "Ver resultados" : "Siguiente Pregunta";
+              btnText = (page == questions.length - 1)
+                  ? "Ver resultados"
+                  : "Siguiente Pregunta";
               answered = false;
             });
           },
@@ -81,7 +83,8 @@ class _QuizzAnatomiaState extends State<QuizzAnatomia> {
                   Container(
                     width: double.infinity,
                     height: 50.0,
-                    margin: EdgeInsets.only(bottom: 20.0, left: 12.0, right: 12.0),
+                    margin:
+                        EdgeInsets.only(bottom: 20.0, left: 12.0, right: 12.0),
                     child: RawMaterialButton(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8.0),
@@ -93,7 +96,10 @@ class _QuizzAnatomiaState extends State<QuizzAnatomia> {
                           : AppColor.secondaryColor,
                       onPressed: !answered
                           ? () {
-                              if (questions[index].answers!.values.toList()[i]) {
+                              if (questions[index]
+                                  .answers!
+                                  .values
+                                  .toList()[i]) {
                                 score++;
                               }
                               setState(() {
