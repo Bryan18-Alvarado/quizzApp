@@ -4,72 +4,72 @@ import 'package:flutter/material.dart';
 
 List<QuestionModelGeneticaNivel3> questionsGeneticas = [
   QuestionModelGeneticaNivel3(
-    "¿La genética es el estudio de la herencia y la variación en los organismos?.",
+    "¿Los seres humanos tienen más genes que un grano de arroz?.",
+    {
+      "Verdadero": false,
+      "Falso": true,
+    },
+  ),
+  QuestionModelGeneticaNivel3(
+    "¿El ADN mitocondrial solo se hereda de la madre?.",
     {
       "Verdadero": true,
       "Falso": false,
     },
   ),
   QuestionModelGeneticaNivel3(
-    "¿Todos los seres vivos tienen ADN, excepto algunos virus.?.",
+    "¿Los rasgos poligénicos son controlados por un solo gen?.",
     {
       "Verdadero": false,
       "Falso": true,
     },
   ),
   QuestionModelGeneticaNivel3(
-    "¿Los gemelos idénticos tienen exactamente el mismo ADN?.",
+    "¿La clonación es una técnica que permite crear copias idénticas de organismos?.",
     {
       "Verdadero": true,
       "Falso": false,
     },
   ),
   QuestionModelGeneticaNivel3(
-    "¿EI ADN se encuentra únicamente en el núcleo de la célula?.",
-    {
-      "Verdadero": false,
-      "Falso": true,
-    },
-  ),
-  QuestionModelGeneticaNivel3(
-    "¿Los seres humanos tienen 23 pares de cromosomas?.",
+    "¿La epigenética estudia cómo el ambiente puede influir en la expresión genética?.",
     {
       "Verdadero": true,
       "Falso": false,
     },
   ),
   QuestionModelGeneticaNivel3(
-    "¿El grupo sanguíneo es un ejemplo de un rasgo heredado?.",
+    "¿Los cromosomas sexuales determinan únicamente el sexo de un individuo?.",
+    {
+      "Verdadero": false,
+      "Falso": true,
+    },
+  ),
+  QuestionModelGeneticaNivel3(
+    "¿La terapia génica puede curar algunas enfermedades genéticas?.",
     {
       "Verdadero": true,
       "Falso": false,
     },
   ),
   QuestionModelGeneticaNivel3(
-    "¿Las mutaciones genéticas siempre son perjudiciales?.",
+    "¿El genoma humano contiene más de 100,000 genes?.",
     {
       "Verdadero": false,
       "Falso": true,
     },
   ),
   QuestionModelGeneticaNivel3(
-    "¿El color de ojos es determinado por un solo gen?.",
+    "¿La selección natural y la genética no están relacionadas?.",
     {
       "Verdadero": false,
       "Falso": true,
     },
   ),
   QuestionModelGeneticaNivel3(
-    "¿Los genes se componen de proteínas?.",
+    "¿Los alelos múltiples pueden existir para un solo gen?.",
     {
-      "Verdadero": false,
-      "Falso": true,
-    },
-  ),
-  QuestionModelGeneticaNivel3(
-    "¿El genoma humano fue completamente secuenciado en el Proyecto Genoma Humano?.",
-    {
-      "Verdadero": false,
+      "Verdadero": true,
       "Falso": true,
     },
   ),

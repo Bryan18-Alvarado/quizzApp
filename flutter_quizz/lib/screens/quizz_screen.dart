@@ -53,15 +53,13 @@ class _QuizzScreenState extends State<QuizzScreen> {
                 children: [
                   SizedBox(
                     width: double.infinity,
-                    child: Text(
-                      "Pregunta ${index + 1}/20",
-                      textAlign: TextAlign.start,
-                      style: GoogleFonts.abel(
-                      textStyle:Theme.of(context).textTheme.displayLarge,
-                        color: Color.fromARGB(255, 230, 228, 88),
-                        fontSize: 28.0,
-                      
-                    )),
+                    child: Text("Pregunta ${index + 1}/20",
+                        textAlign: TextAlign.start,
+                        style: GoogleFonts.abel(
+                          textStyle: Theme.of(context).textTheme.displayLarge,
+                          color: Color.fromARGB(255, 230, 228, 88),
+                          fontSize: 28.0,
+                        )),
                   ),
                   Divider(
                     color: Colors.white,
@@ -72,15 +70,12 @@ class _QuizzScreenState extends State<QuizzScreen> {
                   SizedBox(
                     width: double.infinity,
                     height: 200.0,
-                    child: Text(
-                      "${questions[index].question}",
-                      style: GoogleFonts.adventPro(
-                      textStyle:Theme.of(context).textTheme.displayLarge,
-                        color: Colors.white,
-                        fontSize: 22.0,
-                        
-                      
-                    )),
+                    child: Text("${questions[index].question}",
+                        style: GoogleFonts.adventPro(
+                          textStyle: Theme.of(context).textTheme.displayLarge,
+                          color: Colors.white,
+                          fontSize: 22.0,
+                        )),
                   ),
                   for (int i = 0; i < questions[index].answers!.length; i++)
                     Container(
@@ -116,7 +111,8 @@ class _QuizzScreenState extends State<QuizzScreen> {
                             : null,
                         child: Text(questions[index].answers!.keys.toList()[i],
                             style: GoogleFonts.alatsi(
-                            textStyle: Theme.of(context).textTheme.displayLarge,
+                              textStyle:
+                                  Theme.of(context).textTheme.displayLarge,
                               color: Colors.white,
                               fontSize: 18.0,
                             )),

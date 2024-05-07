@@ -14,17 +14,17 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: BiotecnologiaWidget(),
+      home: GeneticaWidget(),
     );
   }
 }
 
-class BiotecnologiaWidget extends StatefulWidget {
+class GeneticaWidget extends StatefulWidget {
   @override
   _BiotecnologiaWidgetState createState() => _BiotecnologiaWidgetState();
 }
 
-class _BiotecnologiaWidgetState extends State<BiotecnologiaWidget> {
+class _BiotecnologiaWidgetState extends State<GeneticaWidget> {
   int _selectedIndex = 0;
 
   final List<Widget> _pages = [
@@ -1133,6 +1133,33 @@ class QuizzWidget extends StatelessWidget {
             ),
           ),
           SizedBox(height: 20), // Añade un espacio entre los botones
+          ElevatedButton(
+            onPressed: () {
+              // Lógica para redirigir a la segunda interfaz
+            },
+            child: Text(
+              'Nivel 2',
+              style: TextStyle(
+                fontSize: 24.0,
+                color: Colors.blue,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          SizedBox(height: 20), // Añade un espacio entre los botones
+          ElevatedButton(
+            onPressed: () {
+              // Lógica para redirigir a la tercera interfaz
+            },
+            child: Text(
+              'Nivel 3',
+              style: TextStyle(
+                fontSize: 24.0,
+                color: Colors.blue,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
         ],
       ),
     );

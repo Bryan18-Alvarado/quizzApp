@@ -106,13 +106,13 @@ class _MainMenuState extends State<MainMenu> {
               ),
             ),
             Center(
-              child: Text(
-                "Más que un Colegio, una  Gran Familia",
-                textAlign: TextAlign.center,
-                style: GoogleFonts.abel(
+                child: Text(
+              "Más que un Colegio, una  Gran Familia",
+              textAlign: TextAlign.center,
+              style: GoogleFonts.abel(
                 textStyle: Theme.of(context).textTheme.displayLarge,
                 color: Colors.white,
-                fontSize:18,
+                fontSize: 18,
               ),
             )),
           ],
