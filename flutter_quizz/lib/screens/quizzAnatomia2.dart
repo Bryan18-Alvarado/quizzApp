@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:tiedepeli/data/quizzAnatomiaNivel1.dart';
-import 'package:tiedepeli/data/questions_example.dart';
+import 'package:tiedepeli/data/quizzAnatomiaNivel2.dart';
 import 'package:tiedepeli/screens/result_screen.dart';
 import 'package:tiedepeli/ui/shared/color.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class QuizzAnatomia1 extends StatefulWidget {
-  const QuizzAnatomia1({Key? key}) : super(key: key);
+class QuizzAnatomia2 extends StatefulWidget {
+  const QuizzAnatomia2({Key? key}) : super(key: key);
 
   @override
   _QuizzAnatomiaState createState() => _QuizzAnatomiaState();
 }
 
-class _QuizzAnatomiaState extends State<QuizzAnatomia1> {
+class _QuizzAnatomiaState extends State<QuizzAnatomia2> {
   int questionPos = 0;
   int score = 0;
   bool btnPressed = false;
@@ -38,9 +37,7 @@ class _QuizzAnatomiaState extends State<QuizzAnatomia1> {
           onPageChanged: (page) {
             setState(() {
               questionPos = page;
-              btnText = (page == questionsAnatomia.length - 1)
-                  ? "Ver resultados"
-                  : "Siguiente Pregunta";
+              btnText = (page == questionsAnatomia.length - 1) ? "Ver resultados" : "Siguiente Pregunta";
               answered = false;
             });
           },
@@ -80,14 +77,11 @@ class _QuizzAnatomiaState extends State<QuizzAnatomia1> {
                     ),
                   ),
                 ),
-                for (int i = 0;
-                    i < questionsAnatomia[index].answers!.length;
-                    i++)
+                for (int i = 0; i < questionsAnatomia[index].answers!.length; i++)
                   Container(
                     width: double.infinity,
                     height: 50.0,
-                    margin:
-                        EdgeInsets.only(bottom: 20.0, left: 12.0, right: 12.0),
+                    margin: EdgeInsets.only(bottom: 20.0, left: 12.0, right: 12.0),
                     child: RawMaterialButton(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8.0),
@@ -99,10 +93,7 @@ class _QuizzAnatomiaState extends State<QuizzAnatomia1> {
                           : AppColor.secondaryColor,
                       onPressed: !answered
                           ? () {
-                              if (questionsAnatomia[index]
-                                  .answers!
-                                  .values
-                                  .toList()[i]) {
+                              if (questionsAnatomia[index].answers!.values.toList()[i]) {
                                 score++;
                               }
                               setState(() {
@@ -126,8 +117,7 @@ class _QuizzAnatomiaState extends State<QuizzAnatomia1> {
                 ),
                 RawMaterialButton(
                   onPressed: () {
-                    if (_controller!.page?.toInt() ==
-                        questionsAnatomia.length - 1) {
+                    if (_controller!.page?.toInt() == questionsAnatomia.length - 1) {
                       Navigator.push(
                           context,
                           MaterialPageRoute(

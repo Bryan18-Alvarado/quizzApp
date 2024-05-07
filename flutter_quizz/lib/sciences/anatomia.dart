@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tiedepeli/screens/quizzAnatomia2.dart';
 import 'package:tiedepeli/ui/shared/color.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tiedepeli/screens/quizzAnatomia.dart';
@@ -708,7 +709,7 @@ class QuizzWidget extends StatelessWidget {
             onPressed: () {
               Navigator.push( // Utiliza Navigator.push para navegar a QuizzAnatomia
                 context,
-                MaterialPageRoute(builder: (context) => QuizzAnatomia()),
+                MaterialPageRoute(builder: (context) => QuizzAnatomia1()),
               );
             },
             child: Text(
@@ -723,7 +724,10 @@ class QuizzWidget extends StatelessWidget {
           SizedBox(height: 20), // Añade un espacio entre los botones
           ElevatedButton(
             onPressed: () {
-              // Lógica para redirigir a la segunda interfaz
+              Navigator.push( // Utiliza Navigator.push para navegar a QuizzAnatomia
+                context,
+                MaterialPageRoute(builder: (context) => QuizzAnatomia2()),
+              );
             },
             child: Text(
               'Nivel 2',

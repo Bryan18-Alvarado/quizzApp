@@ -9,10 +9,10 @@ class QuizzBiotecnologia extends StatefulWidget {
   const QuizzBiotecnologia({Key? key}) : super(key: key);
 
   @override
-  _QuizzAnatomiaState createState() => _QuizzAnatomiaState();
+  _QuizzBiotecnologiaState createState() => _QuizzBiotecnologiaState();
 }
 
-class _QuizzAnatomiaState extends State<QuizzBiotecnologia> {
+class _QuizzBiotecnologiaState extends State<QuizzBiotecnologia> {
   int questionPos = 0;
   int score = 0;
   bool btnPressed = false;
