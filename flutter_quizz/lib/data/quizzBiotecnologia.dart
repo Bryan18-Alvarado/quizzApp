@@ -1,11 +1,12 @@
+import 'package:tiedepeli/model/questionModelBiotecnologia.dart';
 import 'package:tiedepeli/model/question_model.dart';
 // import 'package:quizz_app/screens/review_quizz.dart';
 import 'package:tiedepeli/data/quizzBiotecnologia.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 
-List<QuestionModel> questions = [
-  QuestionModel(
+List<QuestionModelBiotecnologia> questionsBiotecnologias = [
+  QuestionModelBiotecnologia(
     "¿Qué es la biotecnología?",
     {
       "Un conjunto de técnicas que utilizan organismos vivos  ": true,
@@ -14,7 +15,7 @@ List<QuestionModel> questions = [
           false,
     },
   ),
-  QuestionModel(
+  QuestionModelBiotecnologia(
     "¿Cuáles son los tipos de biotecnología según su área de interés? ",
     {
       "Roja, verde, azul, blanca, gris, dorada, naranja, amarilla,  negra":
@@ -24,7 +25,7 @@ List<QuestionModel> questions = [
       "Marrón, celeste, naranja, azul, dorado": false,
     },
   ),
-  QuestionModel(
+  QuestionModelBiotecnologia(
     "¿Qué es la biotecnología roja? ",
     {
       "Se centra en la preservación de la vida humana.": true,
@@ -34,7 +35,7 @@ List<QuestionModel> questions = [
       "Se centra en predecir los desastres naturales.": false,
     },
   ),
-  QuestionModel(
+  QuestionModelBiotecnologia(
     "¿Qué se busca con la biotecnología verde?  ",
     {
       "Mejorar el sector agropecuario y la alimentación humana.": true,
@@ -45,7 +46,7 @@ List<QuestionModel> questions = [
       "Mejorar la agroindustria para beneficio de la población.": false,
     },
   ),
-  QuestionModel(
+  QuestionModelBiotecnologia(
     "¿Cuál es el enfoque de la biotecnología azul?  ",
     {
       "Explorar los océanos y sus ecosistemas para obtener materiales biotecnológicos.":
@@ -56,7 +57,7 @@ List<QuestionModel> questions = [
           false,
     },
   ),
-  QuestionModel(
+  QuestionModelBiotecnologia(
     "¿Qué produce la biotecnología blanca?",
     {
       "Energía, materiales y catalizadores aprovechables por el ser humano.":
@@ -66,7 +67,7 @@ List<QuestionModel> questions = [
       "Produce cualquier cosa aprovechable para el ser humano.": false,
     },
   ),
-  QuestionModel(
+  QuestionModelBiotecnologia(
     "¿Cuál es el objetivo de la biotecnología gris?",
     {
       "Preservar el medio ambiente mediante soluciones a desastres ambientales.":
@@ -77,7 +78,7 @@ List<QuestionModel> questions = [
           false,
     },
   ),
-  QuestionModel(
+  QuestionModelBiotecnologia(
     "¿En qué se basa la biotecnología dorada?",
     {
       "En combinar la biología con la computación para procesar información biológica.":
@@ -87,7 +88,7 @@ List<QuestionModel> questions = [
       "Combina la biología y la ingeniería para obtener información.": false,
     },
   ),
-  QuestionModel(
+  QuestionModelBiotecnologia(
     "¿Qué aborda la biotecnología marrón?",
     {
       "El estudio y aprovechamiento de los desiertos como fuentes de recursos biotecnológicos.":
@@ -98,7 +99,7 @@ List<QuestionModel> questions = [
           false,
     },
   ),
-  QuestionModel(
+  QuestionModelBiotecnologia(
     "¿Cuál es la función de la biotecnología naranja?",
     {
       "Divulgar y educar sobre los beneficios y riesgos de la biotecnología.":

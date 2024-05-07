@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tiedepeli/data/quizzBiotecnologia.dart';
 import 'package:tiedepeli/data/questions_example.dart';
 import 'package:tiedepeli/screens/result_screen.dart';
 import 'package:tiedepeli/ui/shared/color.dart';
@@ -37,7 +38,7 @@ class _QuizzAnatomiaState extends State<QuizzBiotecnologia> {
           onPageChanged: (page) {
             setState(() {
               questionPos = page;
-              btnText = (page == questions.length - 1)
+              btnText = (page == questionsBiotecnologias.length - 1)
                   ? "Ver resultados"
                   : "Siguiente Pregunta";
               answered = false;
@@ -52,7 +53,7 @@ class _QuizzAnatomiaState extends State<QuizzBiotecnologia> {
                 SizedBox(
                   width: double.infinity,
                   child: Text(
-                    "Pregunta ${index + 1}/${questions.length}",
+                    "Pregunta ${index + 1}/${questionsBiotecnologias.length}",
                     textAlign: TextAlign.start,
                     style: GoogleFonts.abel(
                       textStyle: Theme.of(context).textTheme.displayLarge,
@@ -69,9 +70,9 @@ class _QuizzAnatomiaState extends State<QuizzBiotecnologia> {
                 ),
                 SizedBox(
                   width: double.infinity,
-                  height: 200.0,
+                  height: 100.0,
                   child: Text(
-                    "${questions[index].question}",
+                    "${questionsBiotecnologias[index].questionsBiotecnologia}",
                     style: GoogleFonts.adventPro(
                       textStyle: Theme.of(context).textTheme.displayLarge,
                       color: Colors.white,
@@ -79,10 +80,12 @@ class _QuizzAnatomiaState extends State<QuizzBiotecnologia> {
                     ),
                   ),
                 ),
-                for (int i = 0; i < questions[index].answers!.length; i++)
+                for (int i = 0;
+                    i < questionsBiotecnologias[index].answers!.length;
+                    i++)
                   Container(
                     width: double.infinity,
-                    height: 50.0,
+                    height: 60.0,
                     margin:
                         EdgeInsets.only(bottom: 20.0, left: 12.0, right: 12.0),
                     child: RawMaterialButton(
@@ -90,13 +93,16 @@ class _QuizzAnatomiaState extends State<QuizzBiotecnologia> {
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                       fillColor: btnPressed
-                          ? questions[index].answers!.values.toList()[i]
+                          ? questionsBiotecnologias[index]
+                                  .answers!
+                                  .values
+                                  .toList()[i]
                               ? Colors.green
                               : Colors.red
                           : AppColor.secondaryColor,
                       onPressed: !answered
                           ? () {
-                              if (questions[index]
+                              if (questionsBiotecnologias[index]
                                   .answers!
                                   .values
                                   .toList()[i]) {
@@ -109,7 +115,10 @@ class _QuizzAnatomiaState extends State<QuizzBiotecnologia> {
                             }
                           : null,
                       child: Text(
-                        questions[index].answers!.keys.toList()[i],
+                        questionsBiotecnologias[index]
+                            .answers!
+                            .keys
+                            .toList()[i],
                         style: GoogleFonts.alatsi(
                           textStyle: Theme.of(context).textTheme.displayLarge,
                           color: Colors.white,
@@ -123,7 +132,8 @@ class _QuizzAnatomiaState extends State<QuizzBiotecnologia> {
                 ),
                 RawMaterialButton(
                   onPressed: () {
-                    if (_controller!.page?.toInt() == questions.length - 1) {
+                    if (_controller!.page?.toInt() ==
+                        questionsBiotecnologias.length - 1) {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
@@ -150,7 +160,7 @@ class _QuizzAnatomiaState extends State<QuizzBiotecnologia> {
               ],
             );
           },
-          itemCount: questions.length,
+          itemCount: questionsBiotecnologias.length,
         ),
       ),
     );
