@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:tiedepeli/data/quizzAnatomiaNivel1.dart';
 import 'package:tiedepeli/data/questions_example.dart';
 import 'package:tiedepeli/screens/result_screen.dart';
 import 'package:tiedepeli/ui/shared/color.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class QuizzAnatomia extends StatefulWidget {
-  const QuizzAnatomia({Key? key}) : super(key: key);
+class QuizzAnatomia1 extends StatefulWidget {
+  const QuizzAnatomia1({Key? key}) : super(key: key);
 
   @override
   _QuizzAnatomiaState createState() => _QuizzAnatomiaState();
 }
 
-class _QuizzAnatomiaState extends State<QuizzAnatomia> {
+class _QuizzAnatomiaState extends State<QuizzAnatomia1> {
   int questionPos = 0;
   int score = 0;
   bool btnPressed = false;
@@ -37,7 +38,7 @@ class _QuizzAnatomiaState extends State<QuizzAnatomia> {
           onPageChanged: (page) {
             setState(() {
               questionPos = page;
-              btnText = (page == questions.length - 1) ? "Ver resultados" : "Siguiente Pregunta";
+              btnText = (page == questionsAnatomia.length - 1) ? "Ver resultados" : "Siguiente Pregunta";
               answered = false;
             });
           },
@@ -50,7 +51,7 @@ class _QuizzAnatomiaState extends State<QuizzAnatomia> {
                 SizedBox(
                   width: double.infinity,
                   child: Text(
-                    "Pregunta ${index + 1}/${questions.length}",
+                    "Pregunta ${index + 1}/${questionsAnatomia.length}",
                     textAlign: TextAlign.start,
                     style: GoogleFonts.abel(
                       textStyle: Theme.of(context).textTheme.displayLarge,
@@ -69,7 +70,7 @@ class _QuizzAnatomiaState extends State<QuizzAnatomia> {
                   width: double.infinity,
                   height: 200.0,
                   child: Text(
-                    "${questions[index].question}",
+                    "${questionsAnatomia[index].questionsAnatomia}",
                     style: GoogleFonts.adventPro(
                       textStyle: Theme.of(context).textTheme.displayLarge,
                       color: Colors.white,
@@ -77,7 +78,7 @@ class _QuizzAnatomiaState extends State<QuizzAnatomia> {
                     ),
                   ),
                 ),
-                for (int i = 0; i < questions[index].answers!.length; i++)
+                for (int i = 0; i < questionsAnatomia[index].answers!.length; i++)
                   Container(
                     width: double.infinity,
                     height: 50.0,
@@ -87,13 +88,13 @@ class _QuizzAnatomiaState extends State<QuizzAnatomia> {
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                       fillColor: btnPressed
-                          ? questions[index].answers!.values.toList()[i]
+                          ? questionsAnatomia[index].answers!.values.toList()[i]
                               ? Colors.green
                               : Colors.red
                           : AppColor.secondaryColor,
                       onPressed: !answered
                           ? () {
-                              if (questions[index].answers!.values.toList()[i]) {
+                              if (questionsAnatomia[index].answers!.values.toList()[i]) {
                                 score++;
                               }
                               setState(() {
@@ -103,7 +104,7 @@ class _QuizzAnatomiaState extends State<QuizzAnatomia> {
                             }
                           : null,
                       child: Text(
-                        questions[index].answers!.keys.toList()[i],
+                        questionsAnatomia[index].answers!.keys.toList()[i],
                         style: GoogleFonts.alatsi(
                           textStyle: Theme.of(context).textTheme.displayLarge,
                           color: Colors.white,
@@ -117,7 +118,7 @@ class _QuizzAnatomiaState extends State<QuizzAnatomia> {
                 ),
                 RawMaterialButton(
                   onPressed: () {
-                    if (_controller!.page?.toInt() == questions.length - 1) {
+                    if (_controller!.page?.toInt() == questionsAnatomia.length - 1) {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
@@ -144,7 +145,7 @@ class _QuizzAnatomiaState extends State<QuizzAnatomia> {
               ],
             );
           },
-          itemCount: questions.length,
+          itemCount: questionsAnatomia.length,
         ),
       ),
     );
