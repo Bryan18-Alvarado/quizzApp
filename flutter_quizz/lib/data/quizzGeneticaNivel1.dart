@@ -1,7 +1,4 @@
 import 'package:tiedepeli/model/questionModelGeneticaNivel1.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:tiedepeli/data/quizzGeneticaNivel1.dart';
-import 'package:flutter/material.dart';
 
 List<QuestionModelGeneticaNivel1> questionsGeneticas1 = [
   QuestionModelGeneticaNivel1(
