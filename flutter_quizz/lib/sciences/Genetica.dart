@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tiedepeli/screens/quizzBiotecnologia.dart';
 import 'package:tiedepeli/screens/quizzGeneticaNivel1.dart';
 import 'package:tiedepeli/screens/quizzGeneticaNivel2.dart';
 import 'package:tiedepeli/screens/quizzGeneticaNivel3.dart';
