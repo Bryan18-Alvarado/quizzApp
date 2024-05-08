@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tiedepeli/data/quizzGeneticaNivel1.dart';
 import 'package:tiedepeli/screens/result_screen.dart';
+import 'package:tiedepeli/screens/result_screenGenetica.dart';
 import 'package:tiedepeli/ui/shared/color.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -133,7 +134,8 @@ class _QuizzBiotecnologiaState extends State<Quizzgenetica1> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => ResultScreen(score)));
+                              builder: (context) =>
+                                  ResultScreenGenetica(score)));
                     } else {
                       _controller!.nextPage(
                           duration: Duration(milliseconds: 250),
