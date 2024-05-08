@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:tiedepeli/sciences/Anatomia.dart';
 import 'package:tiedepeli/screens/quizzAnatomia2.dart';
 import 'package:tiedepeli/screens/quizzAnatomia3.dart';
 import 'package:tiedepeli/ui/shared/color.dart';
@@ -9,7 +7,8 @@ import 'package:tiedepeli/screens/bioscience.dart';
 
 // Esta función calcula la media de preguntas correctamente respondidas
 double calcularMedia(int totalPreguntas, int puntajeUsuario) {
-  return totalPreguntas / 2; // Suponiendo que el total de preguntas es el doble del puntaje máximo posible
+  return totalPreguntas /
+      2; // Suponiendo que el total de preguntas es el doble del puntaje máximo posible
 }
 
 class ResultScreenAnatomia extends StatefulWidget {
@@ -157,7 +156,8 @@ class _ResultScreenState extends State<ResultScreenAnatomia> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => QuizzWidget (),
+
+                    builder: (context) => QuizzAnatomia2(),
                   ),
                 );
               },
