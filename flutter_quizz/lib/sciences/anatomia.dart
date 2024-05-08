@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:tiedepeli/screens/quizzAnatomia2.dart';
 import 'package:tiedepeli/screens/quizzAnatomia3.dart';
 import 'package:tiedepeli/ui/shared/color.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:tiedepeli/screens/quizzAnatomia.dart';
 
 void main() {

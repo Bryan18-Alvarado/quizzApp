@@ -1,8 +1,4 @@
 import 'package:tiedepeli/model/questionModelAnatomiaNivel3.dart';
-import 'package:tiedepeli/model/question_model.dart';
-import 'package:tiedepeli/data/quizzBiotecnologia.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:flutter/material.dart';
 
 List<QuestionModelAnatomia3> questionsAnatomia = [
   //1
@@ -27,9 +23,9 @@ List<QuestionModelAnatomia3> questionsAnatomia = [
   ),
 
   QuestionModelAnatomia3(
-     "¿Qué médico realizó las primeras disecciones humanas sistemáticas en el siglo III a.C.?",
+    "¿Qué médico realizó las primeras disecciones humanas sistemáticas en el siglo III a.C.?",
     {
-       "Hipócrates.": false,
+      "Hipócrates.": false,
       "Galen.": false,
       "Herophilus.": true,
       "Erasistratus.": false
@@ -47,7 +43,7 @@ List<QuestionModelAnatomia3> questionsAnatomia = [
   ),
 
   QuestionModelAnatomia3(
-   "¿Qué doctrina desarrolló Galeno en el estudio de la anatomía?",
+    "¿Qué doctrina desarrolló Galeno en el estudio de la anatomía?",
     {
       "Doctrina de la 'causa final'.": true,
       "Doctrina de la 'causa eficiente'.": false,
@@ -58,12 +54,7 @@ List<QuestionModelAnatomia3> questionsAnatomia = [
 
   QuestionModelAnatomia3(
     "¿Qué figura se utilizaba comúnmente en las ilustraciones anatómicas medievales para representar diferentes sistemas?",
-    {
-      "León.": false,
-      "Elefante.": false,
-      "Rana.": true,
-      "Lobo.": false
-    },
+    {"León.": false, "Elefante.": false, "Rana.": true, "Lobo.": false},
   ),
 
   QuestionModelAnatomia3(
@@ -87,9 +78,9 @@ List<QuestionModelAnatomia3> questionsAnatomia = [
   ),
 
   QuestionModelAnatomia3(
-     "¿Qué técnica se introdujo lentamente y contribuyó al desarrollo de la ilustración científica en el siglo XVI?",
+    "¿Qué técnica se introdujo lentamente y contribuyó al desarrollo de la ilustración científica en el siglo XVI?",
     {
-"Técnica de la acuarela.": false,
+      "Técnica de la acuarela.": false,
       "Técnica de la xilografía.": true,
       "Técnica del óleo.": false,
       "Técnica del grabado en metal.": false

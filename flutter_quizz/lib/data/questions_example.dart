@@ -1,10 +1,4 @@
 import 'package:tiedepeli/model/question_model.dart';
-// import 'package:quizz_app/screens/review_quizz.dart';
-import 'package:tiedepeli/data/questions_example.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:flutter/material.dart';
-
-
 
 List<QuestionModel> questions = [
   QuestionModel(
@@ -15,7 +9,7 @@ List<QuestionModel> questions = [
       "Estudio de las celulas": true,
       "Enfocada en la reproducción de medicamentos": false,
     },
-    ),
+  ),
   // QuestionModel("¿cuál es la unidad básica de la vida?", {
   //   "Tejido": false,
   //   "Órgano": false,
@@ -141,4 +135,3 @@ List<QuestionModel> questions = [
   //   "ninguna de las anteriores": false,
   // }),
 ];
-
