@@ -138,11 +138,17 @@ class TiposWidget extends StatelessWidget {
         children: [
           ListTile(
             title: Text('Anatomía sistemática o descriptiva.',
+            textAlign: TextAlign.center,
                 selectionColor: Colors.white,
                 style: TextStyle(
                     fontSize: 18.0, // Tamaño de fuente
                     fontWeight: FontWeight.bold,
                     color: Colors.white)),
+                    tileColor: Color.fromARGB(
+                255, 22, 103, 253), // Color de fondo del ListTile
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
+            ),
             onTap: () {
               Navigator.push(
                 context,
