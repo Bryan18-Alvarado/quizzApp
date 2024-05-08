@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tiedepeli/screens/quizzGeneticaNivel3.dart'; // Importa el nivel 3
 import 'package:tiedepeli/ui/shared/color.dart';

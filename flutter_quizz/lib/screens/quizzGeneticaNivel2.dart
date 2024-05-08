@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:tiedepeli/data/quizzGeneticaNivel2.dart';
-import 'package:tiedepeli/screens/result_screenGenetica.dart';
 import 'package:tiedepeli/screens/result_screenGenetica2.dart';
 import 'package:tiedepeli/ui/shared/color.dart';
 import 'package:google_fonts/google_fonts.dart';

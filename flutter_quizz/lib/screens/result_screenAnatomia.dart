@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tiedepeli/screens/quizzAnatomia2.dart';
 import 'package:tiedepeli/ui/shared/color.dart';
