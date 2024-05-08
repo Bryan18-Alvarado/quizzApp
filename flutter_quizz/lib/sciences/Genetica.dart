@@ -565,7 +565,7 @@ class QuizzWidget extends StatelessWidget {
             color: Colors.white,
           ),
           Text(
-            'Quizz de Biotecnología',
+            'Quizz de Genética',
             style: TextStyle(
               fontSize: 24.0,
               color: Color.fromARGB(255, 199, 212, 75),
