@@ -85,7 +85,7 @@ class _ResultScreenState extends State<ResultScreenAnatomia> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => BiosciencePage(),
+                    builder: (context) => QuizzAnatomia2(),
                   ),
                 );
               },
@@ -117,7 +117,7 @@ class _ResultScreenState extends State<ResultScreenAnatomia> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => QuizzAnatomia2  (),
+                    builder: (context) => QuizzWidget (),
                   ),
                 );
               },
