@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tiedepeli/screens/quizzAnatomia2.dart';
 import 'package:tiedepeli/screens/quizzAnatomia3.dart';
+import 'package:tiedepeli/screens/result_screenAnatomia.dart';
 import 'package:tiedepeli/ui/shared/color.dart';
 import 'package:tiedepeli/screens/quizzAnatomia.dart';
 
@@ -136,16 +137,19 @@ class TiposWidget extends StatelessWidget {
       backgroundColor: AppColor.pripmaryColor,
       body: ListView(
         children: [
+          SizedBox(height: 10), // Espacio entre los elementos
           ListTile(
             title: Text('Anatomía sistemática o descriptiva.',
-            textAlign: TextAlign.center,
-                selectionColor: Colors.white,
-                style: TextStyle(
-                    fontSize: 18.0, // Tamaño de fuente
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white)),
-                    tileColor: Color.fromARGB(
-                255, 22, 103, 253), // Color de fondo del ListTile
+              textAlign: TextAlign.center,
+              
+              style: TextStyle(
+                fontSize: 18.0, // Tamaño de fuente
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+            
+            tileColor: Color.fromARGB(255, 22, 103, 253), // Color de fondo del ListTile
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
             ),
@@ -158,12 +162,20 @@ class TiposWidget extends StatelessWidget {
               );
             },
           ),
+          SizedBox(height: 10), // Espacio entre los elementos
           ListTile(
             title: Text('Anatomía clínica o aplicada.',
-                style: TextStyle(
-                    fontSize: 18.0, // Tamaño de fuente
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white)),
+            textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 18.0, // Tamaño de fuente
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+            tileColor: Color.fromARGB(255, 22, 103, 253), // Color de fondo del ListTile
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
+            ),
             onTap: () {
               Navigator.push(
                 context,
@@ -173,12 +185,20 @@ class TiposWidget extends StatelessWidget {
               );
             },
           ),
+          SizedBox(height: 10), // Espacio entre los elementos
           ListTile(
             title: Text('Anatomía patológica.',
-                style: TextStyle(
-                    fontSize: 18.0, // Tamaño de fuente
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white)),
+            textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 18.0, // Tamaño de fuente
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+            tileColor: Color.fromARGB(255, 22, 103, 253), // Color de fondo del ListTile
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
+            ),
             onTap: () {
               Navigator.push(
                 context,
@@ -188,12 +208,20 @@ class TiposWidget extends StatelessWidget {
               );
             },
           ),
+          SizedBox(height: 10), // Espacio entre los elementos
           ListTile(
             title: Text('Anatomía comparada',
-                style: TextStyle(
-                    fontSize: 18.0, // Tamaño de fuente
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white)),
+            textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 18.0, // Tamaño de fuente
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+            tileColor: Color.fromARGB(255, 22, 103, 253), // Color de fondo del ListTile
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
+            ),
             onTap: () {
               Navigator.push(
                 context,
@@ -203,12 +231,20 @@ class TiposWidget extends StatelessWidget {
               );
             },
           ),
+          SizedBox(height: 10), // Espacio entre los elementos
           ListTile(
             title: Text('Anatomía funcional o fisiológica',
-                style: TextStyle(
-                    fontSize: 18.0, // Tamaño de fuente
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white)),
+            textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 18.0, // Tamaño de fuente
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+            tileColor: Color.fromARGB(255, 22, 103, 253), // Color de fondo del ListTile
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
+            ),
             onTap: () {
               Navigator.push(
                 context,
@@ -218,12 +254,20 @@ class TiposWidget extends StatelessWidget {
               );
             },
           ),
+          SizedBox(height: 10), // Espacio entre los elementos
           ListTile(
             title: Text('Anatomía vegetal',
-                style: TextStyle(
-                    fontSize: 18.0, // Tamaño de fuente
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white)),
+            textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 18.0, // Tamaño de fuente
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+            tileColor: Color.fromARGB(255, 22, 103, 253), // Color de fondo del ListTile
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
+            ),
             onTap: () {
               Navigator.push(
                 context,
@@ -233,12 +277,20 @@ class TiposWidget extends StatelessWidget {
               );
             },
           ),
+          SizedBox(height: 10), // Espacio entre los elementos
           ListTile(
             title: Text('Anatomía animal o veterinaria',
-                style: TextStyle(
-                    fontSize: 18.0, // Tamaño de fuente
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white)),
+            textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 18.0, // Tamaño de fuente
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+            tileColor: Color.fromARGB(255, 22, 103, 253), // Color de fondo del ListTile
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
+            ),
             onTap: () {
               Navigator.push(
                 context,
@@ -248,12 +300,20 @@ class TiposWidget extends StatelessWidget {
               );
             },
           ),
+          SizedBox(height: 10), // Espacio entre los elementos
           ListTile(
             title: Text('Anatomía humana',
-                style: TextStyle(
-                    fontSize: 18.0, // Tamaño de fuente
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white)),
+            textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 18.0, // Tamaño de fuente
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+            tileColor: Color.fromARGB(255, 22, 103, 253), // Color de fondo del ListTile
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
+            ),
             onTap: () {
               Navigator.push(
                 context,
@@ -268,6 +328,7 @@ class TiposWidget extends StatelessWidget {
     );
   }
 }
+
 
 // concepto de anatomia roja
 class AnatomiaSistematica extends StatelessWidget {
@@ -334,6 +395,7 @@ class AnatomiaClinica extends StatelessWidget {
                 // style: TextStyle(fontWeight: FontWeight.bold, color: Colors.green)
               ),
             ),
+            
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
@@ -690,7 +752,22 @@ class UsosWidget extends StatelessWidget {
 }
 // Importa la pantalla QuizzAnatomia
 
-class QuizzWidget extends StatelessWidget {
+class QuizzWidget extends StatefulWidget {
+  @override
+  _QuizzWidgetState createState() => _QuizzWidgetState();
+}
+
+class _QuizzWidgetState extends State<QuizzWidget> {
+  bool nivel1Completado = false;
+  int puntajeNivel1 = 0;
+
+  void onNivel1Completed(int puntaje) {
+    setState(() {
+      nivel1Completado = true;
+      puntajeNivel1 = puntaje;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -716,7 +793,7 @@ class QuizzWidget extends StatelessWidget {
               Navigator.push(
                 // Utiliza Navigator.push para navegar a QuizzAnatomia
                 context,
-                MaterialPageRoute(builder: (context) => QuizzAnatomia1()),
+                MaterialPageRoute(builder: (context) => QuizzAnatomia1(onCompleted: onNivel1Completed)),
               );
             },
             child: Text(
@@ -730,13 +807,13 @@ class QuizzWidget extends StatelessWidget {
           ),
           SizedBox(height: 20), // Añade un espacio entre los botones
           ElevatedButton(
-            onPressed: () {
+            onPressed: nivel1Completado && puntajeNivel1 > calcularMedia(10, puntajeNivel1) ? () {
               Navigator.push(
                 // Utiliza Navigator.push para navegar a QuizzAnatomia
                 context,
                 MaterialPageRoute(builder: (context) => QuizzAnatomia2()),
               );
-            },
+            } : null,
             child: Text(
               'Nivel 2',
               style: TextStyle(
@@ -748,12 +825,13 @@ class QuizzWidget extends StatelessWidget {
           ),
           SizedBox(height: 20), // Añade un espacio entre los botones
           ElevatedButton(
-            onPressed: () {
+            onPressed: nivel1Completado && puntajeNivel1 > calcularMedia(10, puntajeNivel1) ? () {
               Navigator.push(
+                // Utiliza Navigator.push para navegar a QuizzAnatomia
                 context,
                 MaterialPageRoute(builder: (context) => QuizzAnatomia3()),
               );
-            },
+            } : null,
             child: Text(
               'Nivel 3',
               style: TextStyle(

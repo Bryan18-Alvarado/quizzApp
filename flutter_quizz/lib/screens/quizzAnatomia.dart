@@ -5,20 +5,21 @@ import 'package:tiedepeli/ui/shared/color.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class QuizzAnatomia1 extends StatefulWidget {
-  const QuizzAnatomia1({Key? key}) : super(key: key);
+  final Function(int) onCompleted;
+
+  QuizzAnatomia1({required this.onCompleted});
 
   @override
-  _QuizzAnatomiaState createState() => _QuizzAnatomiaState();
+  _QuizzAnatomia1State createState() => _QuizzAnatomia1State();
 }
 
-class _QuizzAnatomiaState extends State<QuizzAnatomia1> {
+class _QuizzAnatomia1State extends State<QuizzAnatomia1> {
   int questionPos = 0;
   int score = 0;
   bool btnPressed = false;
   PageController? _controller;
   String btnText = "Siguiente Pregunta";
   bool answered = false;
-  bool levelUnlocked = false;
 
   @override
   void initState() {
@@ -127,11 +128,13 @@ class _QuizzAnatomiaState extends State<QuizzAnatomia1> {
                   onPressed: () {
                     if (_controller!.page?.toInt() ==
                         questionsAnatomia.length - 1) {
+                      widget.onCompleted(score); // Llama a la función onCompleted con el puntaje obtenido
                       Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) =>
-                                  ResultScreenAnatomia(score)));
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ResultScreenAnatomia(score),
+                        ),
+                      );
                     } else {
                       _controller!.nextPage(
                           duration: Duration(milliseconds: 250),
@@ -160,3 +163,4 @@ class _QuizzAnatomiaState extends State<QuizzAnatomia1> {
     );
   }
 }
+
