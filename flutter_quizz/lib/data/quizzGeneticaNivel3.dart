@@ -1,8 +1,9 @@
 import 'package:tiedepeli/model/questionModelGeneticaNivel3.dart';
+import 'package:tiedepeli/data/quizzGeneticaNivel3.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 
-List<QuestionModelGeneticaNivel3> questionsGeneticas = [
+List<QuestionModelGeneticaNivel3> questionsGeneticas3 = [
   QuestionModelGeneticaNivel3(
     "¿Los seres humanos tienen más genes que un grano de arroz?.",
     {
