@@ -136,16 +136,19 @@ class TiposWidget extends StatelessWidget {
       backgroundColor: AppColor.pripmaryColor,
       body: ListView(
         children: [
+          SizedBox(height: 10), // Espacio entre los elementos
           ListTile(
             title: Text('Anatomía sistemática o descriptiva.',
-            textAlign: TextAlign.center,
-                selectionColor: Colors.white,
-                style: TextStyle(
-                    fontSize: 18.0, // Tamaño de fuente
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white)),
-                    tileColor: Color.fromARGB(
-                255, 22, 103, 253), // Color de fondo del ListTile
+              textAlign: TextAlign.center,
+              
+              style: TextStyle(
+                fontSize: 18.0, // Tamaño de fuente
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+            
+            tileColor: Color.fromARGB(255, 22, 103, 253), // Color de fondo del ListTile
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
             ),
@@ -158,12 +161,20 @@ class TiposWidget extends StatelessWidget {
               );
             },
           ),
+          SizedBox(height: 10), // Espacio entre los elementos
           ListTile(
             title: Text('Anatomía clínica o aplicada.',
-                style: TextStyle(
-                    fontSize: 18.0, // Tamaño de fuente
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white)),
+            textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 18.0, // Tamaño de fuente
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+            tileColor: Color.fromARGB(255, 22, 103, 253), // Color de fondo del ListTile
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
+            ),
             onTap: () {
               Navigator.push(
                 context,
@@ -173,12 +184,20 @@ class TiposWidget extends StatelessWidget {
               );
             },
           ),
+          SizedBox(height: 10), // Espacio entre los elementos
           ListTile(
             title: Text('Anatomía patológica.',
-                style: TextStyle(
-                    fontSize: 18.0, // Tamaño de fuente
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white)),
+            textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 18.0, // Tamaño de fuente
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+            tileColor: Color.fromARGB(255, 22, 103, 253), // Color de fondo del ListTile
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
+            ),
             onTap: () {
               Navigator.push(
                 context,
@@ -188,12 +207,20 @@ class TiposWidget extends StatelessWidget {
               );
             },
           ),
+          SizedBox(height: 10), // Espacio entre los elementos
           ListTile(
             title: Text('Anatomía comparada',
-                style: TextStyle(
-                    fontSize: 18.0, // Tamaño de fuente
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white)),
+            textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 18.0, // Tamaño de fuente
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+            tileColor: Color.fromARGB(255, 22, 103, 253), // Color de fondo del ListTile
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
+            ),
             onTap: () {
               Navigator.push(
                 context,
@@ -203,12 +230,20 @@ class TiposWidget extends StatelessWidget {
               );
             },
           ),
+          SizedBox(height: 10), // Espacio entre los elementos
           ListTile(
             title: Text('Anatomía funcional o fisiológica',
-                style: TextStyle(
-                    fontSize: 18.0, // Tamaño de fuente
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white)),
+            textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 18.0, // Tamaño de fuente
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+            tileColor: Color.fromARGB(255, 22, 103, 253), // Color de fondo del ListTile
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
+            ),
             onTap: () {
               Navigator.push(
                 context,
@@ -218,12 +253,20 @@ class TiposWidget extends StatelessWidget {
               );
             },
           ),
+          SizedBox(height: 10), // Espacio entre los elementos
           ListTile(
             title: Text('Anatomía vegetal',
-                style: TextStyle(
-                    fontSize: 18.0, // Tamaño de fuente
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white)),
+            textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 18.0, // Tamaño de fuente
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+            tileColor: Color.fromARGB(255, 22, 103, 253), // Color de fondo del ListTile
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
+            ),
             onTap: () {
               Navigator.push(
                 context,
@@ -233,12 +276,20 @@ class TiposWidget extends StatelessWidget {
               );
             },
           ),
+          SizedBox(height: 10), // Espacio entre los elementos
           ListTile(
             title: Text('Anatomía animal o veterinaria',
-                style: TextStyle(
-                    fontSize: 18.0, // Tamaño de fuente
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white)),
+            textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 18.0, // Tamaño de fuente
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+            tileColor: Color.fromARGB(255, 22, 103, 253), // Color de fondo del ListTile
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
+            ),
             onTap: () {
               Navigator.push(
                 context,
@@ -248,12 +299,20 @@ class TiposWidget extends StatelessWidget {
               );
             },
           ),
+          SizedBox(height: 10), // Espacio entre los elementos
           ListTile(
             title: Text('Anatomía humana',
-                style: TextStyle(
-                    fontSize: 18.0, // Tamaño de fuente
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white)),
+            textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 18.0, // Tamaño de fuente
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+            tileColor: Color.fromARGB(255, 22, 103, 253), // Color de fondo del ListTile
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
+            ),
             onTap: () {
               Navigator.push(
                 context,
@@ -268,6 +327,7 @@ class TiposWidget extends StatelessWidget {
     );
   }
 }
+
 
 // concepto de anatomia roja
 class AnatomiaSistematica extends StatelessWidget {
@@ -334,6 +394,7 @@ class AnatomiaClinica extends StatelessWidget {
                 // style: TextStyle(fontWeight: FontWeight.bold, color: Colors.green)
               ),
             ),
+            
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(

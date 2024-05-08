@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       ),
       home: BiotecnologiaWidget(),
     );
-  }
+  }  
 }
 
 class BiotecnologiaWidget extends StatefulWidget {
