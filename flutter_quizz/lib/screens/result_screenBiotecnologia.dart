@@ -68,7 +68,7 @@ class _ResultScreenState extends State<ResultScreenBiotecnologia> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => BiotecnologiaWidget(),
+                  builder: (context) => BiosciencePage(),
                 ),
               );
             },
@@ -99,7 +99,7 @@ class _ResultScreenState extends State<ResultScreenBiotecnologia> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => BiosciencePage(),
+                    builder: (context) => QuizzWidget(),
                   ),
                 );
               },
