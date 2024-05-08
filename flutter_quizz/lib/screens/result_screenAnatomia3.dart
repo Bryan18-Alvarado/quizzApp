@@ -12,18 +12,15 @@ double calcularMedia(int totalPreguntas, int puntajeUsuario) {
   return totalPreguntas / 2; // Suponiendo que el total de preguntas es el doble del puntaje máximo posible
 }
 
-class ResultScreenAnatomia extends StatefulWidget {
+class ResultScreenAnatomia3 extends StatefulWidget {
   int score;
-  ResultScreenAnatomia(this.score, {Key? key}) : super(key: key);
+  ResultScreenAnatomia3(this.score, {Key? key}) : super(key: key);
 
   @override
   _ResultScreenState createState() => _ResultScreenState();
 }
 
-class _ResultScreenState extends State<ResultScreenAnatomia> {
-  bool nivel2Desbloqueado = false;
-  bool nivel3Desbloqueado = false;
-
+class _ResultScreenState extends State<ResultScreenAnatomia3> {
   @override
   Widget build(BuildContext context) {
     int totalPreguntas = 10; // Suponiendo 10 preguntas en total
@@ -35,68 +32,6 @@ class _ResultScreenState extends State<ResultScreenAnatomia> {
       mensaje = "¡Ánimo! Puedes intentarlo de nuevo.";
     } else {
       mensaje = "¡Felicidades! Puedes avanzar al siguiente nivel.";
-      nivel2Desbloqueado = true; // Desbloquear el nivel 2 si el usuario pasa el nivel 1
-      if (widget.score >= media) {
-        nivel3Desbloqueado = true; // Desbloquear el nivel 3 si el usuario pasa el nivel 2 con una puntuación mayor o igual que la media
-      }
-    }
-
-    Widget actionButton;
-
-    if (nivel2Desbloqueado) {
-      actionButton = TextButton(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => QuizzAnatomia2(onCompleted: (int) {  },),
-            ),
-          );
-        },
-        style: ButtonStyle(
-          shape: MaterialStateProperty.all<OutlinedBorder>(
-            StadiumBorder(),
-          ),
-          backgroundColor: MaterialStateProperty.all<Color>(
-            AppColor.secondaryColor,
-          ),
-          padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
-            EdgeInsets.all(18.0),
-          ),
-        ),
-        child: Text(
-          "Avanzar al Nivel 2",
-          style: TextStyle(color: Colors.white),
-        ),
-      );
-    } else if (nivel3Desbloqueado) {
-      actionButton = TextButton(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => QuizzAnatomia3(onCompleted: (int) {  },),
-            ),
-          );
-        },
-        style: ButtonStyle(
-          shape: MaterialStateProperty.all<OutlinedBorder>(
-            StadiumBorder(),
-          ),
-          backgroundColor: MaterialStateProperty.all<Color>(
-            AppColor.secondaryColor,
-          ),
-          padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
-            EdgeInsets.all(18.0),
-          ),
-        ),
-        child: Text(
-          "Avanzar al Nivel 3",
-          style: TextStyle(color: Colors.white),
-        ),
-      );
-    } else {
-      actionButton = SizedBox(); // Si no se desbloquea ningún nivel, no se muestra ningún botón
     }
 
     return Scaffold(
@@ -145,7 +80,33 @@ class _ResultScreenState extends State<ResultScreenAnatomia> {
           SizedBox(
             height: 100.0,
           ),
-          actionButton,
+          if (widget.score >= media) ...[
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => QuizzAnatomia3(onCompleted: (int) {  },),
+                  ),
+                );
+              },
+              style: ButtonStyle(
+                shape: MaterialStateProperty.all<OutlinedBorder>(
+                  StadiumBorder(),
+                ),
+                backgroundColor: MaterialStateProperty.all<Color>(
+                  AppColor.secondaryColor,
+                ),
+                padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+                  EdgeInsets.all(18.0),
+                ),
+              ),
+              child: Text(
+                "Avanzar al Nivel 3",
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+          ],
           SizedBox(
             height: 10.0, // Espacio adicional entre los botones
           ),

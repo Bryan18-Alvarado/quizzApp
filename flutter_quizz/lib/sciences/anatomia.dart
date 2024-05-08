@@ -761,6 +761,9 @@ class _QuizzWidgetState extends State<QuizzWidget> {
   bool nivel1Completado = false;
   int puntajeNivel1 = 0;
 
+  bool nivel2Completado = false;
+  int puntajeNivel2 = 0;
+
   void onNivel1Completed(int puntaje) {
     setState(() {
       nivel1Completado = true;
@@ -768,6 +771,15 @@ class _QuizzWidgetState extends State<QuizzWidget> {
     });
   }
 
+  void onNivel2Completed(int puntaje) {
+    setState(() {
+      nivel2Completado = true;
+      puntajeNivel2 = puntaje;
+    });
+  }  
+ double calcularMedia(int totalPreguntas, int puntajeUsuario) {
+    return totalPreguntas / 2;
+  }
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -811,7 +823,7 @@ class _QuizzWidgetState extends State<QuizzWidget> {
               Navigator.push(
                 // Utiliza Navigator.push para navegar a QuizzAnatomia
                 context,
-                MaterialPageRoute(builder: (context) => QuizzAnatomia2()),
+                MaterialPageRoute(builder: (context) => QuizzAnatomia2(onCompleted:onNivel2Completed)),
               );
             } : null,
             child: Text(
@@ -829,7 +841,7 @@ class _QuizzWidgetState extends State<QuizzWidget> {
               Navigator.push(
                 // Utiliza Navigator.push para navegar a QuizzAnatomia
                 context,
-                MaterialPageRoute(builder: (context) => QuizzAnatomia3()),
+                MaterialPageRoute(builder: (context) => QuizzAnatomia3(onCompleted: (int) {  },)),
               );
             } : null,
             child: Text(

@@ -6,7 +6,7 @@ import 'package:tiedepeli/ui/shared/color.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class QuizzAnatomia3 extends StatefulWidget {
-  const QuizzAnatomia3({Key? key}) : super(key: key);
+  const QuizzAnatomia3({Key? key, required Null Function(dynamic int) onCompleted}) : super(key: key);
 
   @override
   _QuizzAnatomiaState createState() => _QuizzAnatomiaState();
