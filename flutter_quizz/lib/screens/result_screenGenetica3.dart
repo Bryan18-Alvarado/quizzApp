@@ -59,34 +59,6 @@ class _ResultScreenState extends State<ResultScreenGenetica3> {
           SizedBox(
             height: 100.0,
           ),
-          TextButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => BiosciencePage(),
-                ),
-              );
-            },
-            style: ButtonStyle(
-              shape: MaterialStateProperty.all<OutlinedBorder>(
-                StadiumBorder(),
-              ),
-              backgroundColor: MaterialStateProperty.all<Color>(
-                AppColor.secondaryColor,
-              ),
-              padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
-                EdgeInsets.all(18.0),
-              ),
-            ),
-            child: Text(
-              "Regresar",
-              style: TextStyle(color: Colors.white),
-            ),
-          ),
-          SizedBox(
-            height: 10.0,
-          ),
           Container(
             margin: EdgeInsets.only(bottom: 30.0),
             child: widget.score > 5 // Verifica si el puntaje es mayor que 5
@@ -96,7 +68,7 @@ class _ResultScreenState extends State<ResultScreenGenetica3> {
                         context,
                         MaterialPageRoute(
                           builder: (context) =>
-                              Quizzgenetica3(), // Navega al nivel 3
+                              BiosciencePage(), // Navega al nivel 3
                         ),
                       );
                     },

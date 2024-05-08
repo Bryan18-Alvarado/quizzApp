@@ -68,7 +68,7 @@ List<QuestionModelGeneticaNivel3> questionsGeneticas3 = [
     "¿Los alelos múltiples pueden existir para un solo gen?.",
     {
       "Verdadero": true,
-      "Falso": true,
+      "Falso": false,
     },
   ),
 ];
