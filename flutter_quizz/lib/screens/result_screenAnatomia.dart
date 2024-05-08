@@ -1,21 +1,20 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tiedepeli/sciences/Anatomia.dart';
-import 'package:tiedepeli/screens/quizzAnatomia.dart';
 import 'package:tiedepeli/ui/shared/color.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tiedepeli/screens/bioscience.dart';
 
 // ignore: must_be_immutable
-class ResultScreenGenetica extends StatefulWidget {
+class ResultScreenAnatomia extends StatefulWidget {
   int score;
-  ResultScreenGenetica(this.score, {Key? key}) : super(key: key);
+  ResultScreenAnatomia(this.score, {Key? key}) : super(key: key);
 
   @override
   _ResultScreenState createState() => _ResultScreenState();
 }
 
-class _ResultScreenState extends State<ResultScreenGenetica> {
+class _ResultScreenState extends State<ResultScreenAnatomia> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
