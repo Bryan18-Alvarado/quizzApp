@@ -590,40 +590,40 @@ class QuizzWidget extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 20), // Añade un espacio entre los botones
-          ElevatedButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Quizzgenetica2()),
-              );
-            },
-            child: Text(
-              'Nivel 2',
-              style: TextStyle(
-                fontSize: 24.0,
-                color: Colors.blue,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
-          SizedBox(height: 20), // Añade un espacio entre los botones
-          ElevatedButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Quizzgenetica3()),
-              );
-            },
-            child: Text(
-              'Nivel 3',
-              style: TextStyle(
-                fontSize: 24.0,
-                color: Colors.blue,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
+          // SizedBox(height: 20), // Añade un espacio entre los botones
+          // ElevatedButton(
+          //   onPressed: () {
+          //     Navigator.push(
+          //       context,
+          //       MaterialPageRoute(builder: (context) => Quizzgenetica2()),
+          //     );
+          //   },
+          //   child: Text(
+          //     'Nivel 2',
+          //     style: TextStyle(
+          //       fontSize: 24.0,
+          //       color: Colors.blue,
+          //       fontWeight: FontWeight.bold,
+          //     ),
+          //   ),
+          // ),
+          // SizedBox(height: 20), // Añade un espacio entre los botones
+          // ElevatedButton(
+          //   onPressed: () {
+          //     Navigator.push(
+          //       context,
+          //       MaterialPageRoute(builder: (context) => Quizzgenetica3()),
+          //     );
+          //   },
+          //   child: Text(
+          //     'Nivel 3',
+          //     style: TextStyle(
+          //       fontSize: 24.0,
+          //       color: Colors.blue,
+          //       fontWeight: FontWeight.bold,
+          //     ),
+          //   ),
+          // ),
         ],
       ),
     );

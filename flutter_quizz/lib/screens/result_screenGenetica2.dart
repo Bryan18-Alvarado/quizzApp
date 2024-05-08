@@ -1,24 +1,23 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:tiedepeli/screens/quizzGeneticaNivel2.dart';
+import 'package:tiedepeli/screens/quizzGeneticaNivel3.dart'; // Importa el nivel 3
 import 'package:tiedepeli/ui/shared/color.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tiedepeli/screens/bioscience.dart';
 
-// ignore: must_be_immutable
-class ResultScreenGenetica extends StatefulWidget {
+class ResultScreenGenetica2 extends StatefulWidget {
   int score;
-  ResultScreenGenetica(this.score, {Key? key}) : super(key: key);
+  ResultScreenGenetica2(this.score, {Key? key}) : super(key: key);
 
   @override
   _ResultScreenState createState() => _ResultScreenState();
 }
 
-class _ResultScreenState extends State<ResultScreenGenetica> {
+class _ResultScreenState extends State<ResultScreenGenetica2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.pripmaryColor, // Corregí el nombre del color
+      backgroundColor: AppColor.pripmaryColor,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -29,8 +28,7 @@ class _ResultScreenState extends State<ResultScreenGenetica> {
               "¡Resultados Genética!",
               textAlign: TextAlign.center,
               style: GoogleFonts.alkatra(
-                textStyle:
-                    Theme.of(context).textTheme.headline4, // Corregí el estilo
+                textStyle: Theme.of(context).textTheme.headline4,
                 color: Colors.white,
                 fontSize: 40.0,
                 fontWeight: FontWeight.bold,
@@ -43,8 +41,7 @@ class _ResultScreenState extends State<ResultScreenGenetica> {
           Text(
             "Tu puntaje es:",
             style: GoogleFonts.alkatra(
-              textStyle:
-                  Theme.of(context).textTheme.headline4, // Corregí el estilo
+              textStyle: Theme.of(context).textTheme.headline4,
               color: Colors.white,
               fontSize: 34.0,
             ),
@@ -89,18 +86,18 @@ class _ResultScreenState extends State<ResultScreenGenetica> {
             ),
           ),
           SizedBox(
-            height: 10.0, // Espacio adicional entre los botones
+            height: 10.0,
           ),
           Container(
-            margin: EdgeInsets.only(
-                bottom: 30.0), // Ajuste vertical del botón "Continuar"
-            child: widget.score > 5
+            margin: EdgeInsets.only(bottom: 30.0),
+            child: widget.score > 5 // Verifica si el puntaje es mayor que 5
                 ? TextButton(
                     onPressed: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => Quizzgenetica2(),
+                          builder: (context) =>
+                              Quizzgenetica3(), // Navega al nivel 3
                         ),
                       );
                     },
@@ -108,8 +105,9 @@ class _ResultScreenState extends State<ResultScreenGenetica> {
                       shape: MaterialStateProperty.all<OutlinedBorder>(
                         StadiumBorder(),
                       ),
-                      backgroundColor:
-                          MaterialStateProperty.all<Color>(Colors.white),
+                      backgroundColor: MaterialStateProperty.all<Color>(
+                        Colors.white,
+                      ),
                       padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
                         EdgeInsets.all(18.0),
                       ),
@@ -125,12 +123,11 @@ class _ResultScreenState extends State<ResultScreenGenetica> {
                       "Necesitas un puntaje mayor que 5 para avanzar al siguiente nivel",
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 18.0, // Tamaño de la fuente
-                        fontWeight: FontWeight.bold, // Peso de la fuente
-                        fontStyle: FontStyle.italic, // Estilo de la fuente
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.bold,
+                        fontStyle: FontStyle.italic,
                       ),
-                      textAlign: TextAlign
-                          .center, // Alineación del texto dentro del contenedor
+                      textAlign: TextAlign.center,
                     ),
                   ),
           ),
