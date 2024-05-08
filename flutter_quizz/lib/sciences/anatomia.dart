@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tiedepeli/screens/quizzAnatomia2.dart';
 import 'package:tiedepeli/screens/quizzAnatomia3.dart';
+import 'package:tiedepeli/screens/result_screenAnatomia.dart';
 import 'package:tiedepeli/ui/shared/color.dart';
 import 'package:tiedepeli/screens/quizzAnatomia.dart';
 
@@ -751,7 +752,22 @@ class UsosWidget extends StatelessWidget {
 }
 // Importa la pantalla QuizzAnatomia
 
-class QuizzWidget extends StatelessWidget {
+class QuizzWidget extends StatefulWidget {
+  @override
+  _QuizzWidgetState createState() => _QuizzWidgetState();
+}
+
+class _QuizzWidgetState extends State<QuizzWidget> {
+  bool nivel1Completado = false;
+  int puntajeNivel1 = 0;
+
+  void onNivel1Completed(int puntaje) {
+    setState(() {
+      nivel1Completado = true;
+      puntajeNivel1 = puntaje;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -777,7 +793,7 @@ class QuizzWidget extends StatelessWidget {
               Navigator.push(
                 // Utiliza Navigator.push para navegar a QuizzAnatomia
                 context,
-                MaterialPageRoute(builder: (context) => QuizzAnatomia1()),
+                MaterialPageRoute(builder: (context) => QuizzAnatomia1(onCompleted: onNivel1Completed)),
               );
             },
             child: Text(
@@ -791,13 +807,13 @@ class QuizzWidget extends StatelessWidget {
           ),
           SizedBox(height: 20), // Añade un espacio entre los botones
           ElevatedButton(
-            onPressed: () {
+            onPressed: nivel1Completado && puntajeNivel1 > calcularMedia(10, puntajeNivel1) ? () {
               Navigator.push(
                 // Utiliza Navigator.push para navegar a QuizzAnatomia
                 context,
                 MaterialPageRoute(builder: (context) => QuizzAnatomia2()),
               );
-            },
+            } : null,
             child: Text(
               'Nivel 2',
               style: TextStyle(
@@ -809,12 +825,13 @@ class QuizzWidget extends StatelessWidget {
           ),
           SizedBox(height: 20), // Añade un espacio entre los botones
           ElevatedButton(
-            onPressed: () {
+            onPressed: nivel1Completado && puntajeNivel1 > calcularMedia(10, puntajeNivel1) ? () {
               Navigator.push(
+                // Utiliza Navigator.push para navegar a QuizzAnatomia
                 context,
                 MaterialPageRoute(builder: (context) => QuizzAnatomia3()),
               );
-            },
+            } : null,
             child: Text(
               'Nivel 3',
               style: TextStyle(
