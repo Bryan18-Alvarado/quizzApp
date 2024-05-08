@@ -1,8 +1,4 @@
 import 'package:tiedepeli/model/questionModelBiotecnologia.dart';
-import 'package:tiedepeli/model/question_model.dart';
-import 'package:tiedepeli/data/quizzBiotecnologia.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:flutter/material.dart';
 
 List<QuestionModelBiotecnologia> questionsBiotecnologias = [
   QuestionModelBiotecnologia(

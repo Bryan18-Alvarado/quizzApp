@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tiedepeli/data/quizzBiotecnologia.dart';
-import 'package:tiedepeli/data/questions_example.dart';
-import 'package:tiedepeli/screens/result_screen.dart';
+import 'package:tiedepeli/screens/result_screenBiotecnologia.dart';
 import 'package:tiedepeli/ui/shared/color.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -137,7 +136,8 @@ class _QuizzBiotecnologiaState extends State<QuizzBiotecnologia> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => ResultScreen(score)));
+                              builder: (context) =>
+                                  ResultScreenBiotecnologia(score)));
                     } else {
                       _controller!.nextPage(
                           duration: Duration(milliseconds: 250),

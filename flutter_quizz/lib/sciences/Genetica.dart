@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tiedepeli/screens/quizzBiotecnologia.dart';
+import 'package:tiedepeli/screens/quizzGeneticaNivel1.dart';
+import 'package:tiedepeli/screens/quizzGeneticaNivel2.dart';
+import 'package:tiedepeli/screens/quizzGeneticaNivel3.dart';
 import 'package:tiedepeli/ui/shared/color.dart';
 
 void main() {
@@ -10,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Biotecnología',
+      title: 'Genética',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -38,7 +40,7 @@ class _BiotecnologiaWidgetState extends State<GeneticaWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Biotecnología'),
+        title: Text('Genética'),
       ),
       backgroundColor: AppColor.pripmaryColor, // Color de fondo de la pantalla
       body: _pages[_selectedIndex],
@@ -50,7 +52,7 @@ class _BiotecnologiaWidgetState extends State<GeneticaWidget> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.category),
-            label: 'Tipos',
+            label: 'Historia',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.book),
@@ -92,33 +94,19 @@ class ConceptoWidget extends StatelessWidget {
             children: [
               TextSpan(
                 text:
-                    'La biotecnología es un conjunto de técnicas que utiliza células vivas, cultivo de tejidos o moléculas derivadas de un organismo, por ejemplo, enzimas, para obtener o modificar un producto, mejorar una planta o un animal o desarrollar un microorganismo para utilizarlo con un propósito específico.\n\n',
-                style:
-                    TextStyle(fontWeight: FontWeight.bold, color: Colors.green),
+                    'La genética es una rama de la biología que estudia cómo los caracteres hereditarios se transmiten de generación en generación.\n\nLos genes son las unidades de información que emplean los organismos para transferir un carácter a la descendencia. El gen contiene codificada las instrucciones para sintetizar todas las proteínas de un organismo. Estas proteínas son las que finalmente darán lugar a todos los caracteres de un individuo (fenotipo).',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
               ),
               TextSpan(
                 text:
-                    'Se trata de procesos tecnológicos asociados a organismos vivos y a los procesos biológicos (por ejemplo, fermentación de determinados productos, utilización tecnológica de enzimas, producción de proteínas recombinantes).\n\n',
-                style:
-                    TextStyle(color: const Color.fromARGB(255, 255, 255, 255)),
-              ),
-              TextSpan(
-                text:
-                    'Esta actividad se apoya sobre el conocimiento de determinados procesos biológicos básicos (biología molecular y genética) y ofrece instrumentos para el desarrollo de la agricultura, la pesca, la actividad forestal y las industrias alimentarias de manera sostenible. Cuando se integra debidamente con otras tecnologías para la producción de alimentos, productos agrícolas y servicios, la biotecnología es una herramienta de gran importancia para satisfacer las necesidades de una población en crecimiento.\n\n',
-                style:
-                    TextStyle(color: const Color.fromARGB(255, 255, 255, 255)),
-              ),
-              TextSpan(
-                text:
-                    'La biotecnología es el uso industrial de la biología, es decir, a la aplicación de los principios y saberes sobre el funcionamiento de la vida, a la resolución de problemas diarios del ser humano. Otra forma de entenderlo es que la biotecnología es la ciencia que emplea organismos vivos o sus derivados con fines tecnológicos e industriales.\n\n',
-                style:
-                    TextStyle(color: const Color.fromARGB(255, 255, 255, 255)),
-              ),
-              TextSpan(
-                text:
-                    'La biotecnología se basa en los saberes de la química, física, ingeniería, biología, medicina y veterinaria, para emplear los procesos propios de la vida como una herramienta transformadora, aplicada a compuestos y materiales orgánicos e inorgánicos. Ello no siempre implica la modificación genética, de modo que ambos campos no deben confundirse.\n\n',
-                style:
-                    TextStyle(color: const Color.fromARGB(255, 255, 255, 255)),
+                    '\n\nCada individuo tiene para cada carácter dos genes, uno que ha hereda de su padre y otro de su madre. Hay genes que son dominantes e imponen siempre la información que contienen. Otros, en cambio, son recesivos y en este caso sólo se expresan en ausencia de los genes dominantes. En otras ocasiones, la expresión o no depende del sexo del individuo; en este caso, se habla de genes ligados a sexo.\n\n',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.green,
+                ),
               ),
             ],
           ),
@@ -131,871 +119,50 @@ class ConceptoWidget extends StatelessWidget {
 class TiposWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColor.pripmaryColor,
-      body: ListView(
-        children: [
-          Divider(
-            color: AppColor.pripmaryColor,
-          ),
-          ListTile(
-            title: Text(
-              'Biotecnología roja o médica',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 14, // Tamaño de fuente
-
-                fontWeight: FontWeight.bold, // Peso de la fuente
-                color: Color.fromARGB(255, 255, 255, 255), // Color del texto
-              ),
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: RichText(
+          textAlign: TextAlign.justify,
+          text: TextSpan(
+            style: TextStyle(
+              fontSize: 16.0,
+              color: Colors.black,
             ),
-            // Estilo para el ListTile
-            tileColor: Color.fromARGB(
-                255, 22, 103, 253), // Color de fondo del ListTile
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
-            ),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => DetalleBiotecnologia(),
-                ),
-              );
-            },
-          ),
-          Divider(
-            color: AppColor.pripmaryColor,
-          ),
-          ListTile(
-            title: Text(
-              'Biotecnología verde o agrícola',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 14, // Tamaño de fuente
-
-                fontWeight: FontWeight.bold, // Peso de la fuente
-                color: Color.fromARGB(255, 255, 255, 255), // Color del texto
-              ),
-            ),
-            tileColor: Color.fromARGB(
-                255, 22, 103, 253), // Color de fondo del ListTile
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
-            ),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => DetalleBiotecnologiaVerde(),
-                ),
-              );
-            },
-          ),
-          Divider(
-            color: AppColor.pripmaryColor,
-          ),
-          ListTile(
-            title: Text(
-              'Biotecnología azul o marina',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 14, // Tamaño de fuente
-
-                fontWeight: FontWeight.bold, // Peso de la fuente
-                color: Color.fromARGB(255, 255, 255, 255), // Color del texto
-              ),
-            ),
-            tileColor: Color.fromARGB(
-                255, 22, 103, 253), // Color de fondo del ListTile
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
-            ),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => DetalleBiotecnologiaAzul(),
-                ),
-              );
-            },
-          ),
-          Divider(
-            color: AppColor.pripmaryColor,
-          ),
-          ListTile(
-            title: Text(
-              'Biotecnología blanca o industrial',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 14, // Tamaño de fuente
-
-                fontWeight: FontWeight.bold, // Peso de la fuente
-                color: Color.fromARGB(255, 255, 255, 255), // Color del texto
-              ),
-            ),
-            tileColor: Color.fromARGB(
-                255, 22, 103, 253), // Color de fondo del ListTile
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
-            ),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => DetalleBiotecnologiaBlanca(),
-                ),
-              );
-            },
-          ),
-          Divider(
-            color: AppColor.pripmaryColor,
-          ),
-          ListTile(
-            title: Text(
-              'Biotecnología gris o ecológica',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 14, // Tamaño de fuente
-
-                fontWeight: FontWeight.bold, // Peso de la fuente
-                color: Color.fromARGB(255, 255, 255, 255), // Color del texto
-              ),
-            ),
-            tileColor: Color.fromARGB(
-                255, 22, 103, 253), // Color de fondo del ListTile
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
-            ),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => DetalleBiotecnologiaGris(),
-                ),
-              );
-            },
-          ),
-          Divider(
-            color: AppColor.pripmaryColor,
-          ),
-          ListTile(
-            title: Text(
-              'Biotecnología dorada o informática.',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 14, // Tamaño de fuente
-
-                fontWeight: FontWeight.bold, // Peso de la fuente
-                color: Color.fromARGB(255, 255, 255, 255), // Color del texto
-              ),
-            ),
-            tileColor: Color.fromARGB(
-                255, 22, 103, 253), // Color de fondo del ListTile
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
-            ),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => DetalleBiotecnologiaDorada(),
-                ),
-              );
-            },
-          ),
-          Divider(
-            color: AppColor.pripmaryColor,
-          ),
-          ListTile(
-            title: Text(
-              'Biotecnología marrón o del desierto.',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 14, // Tamaño de fuente
-
-                fontWeight: FontWeight.bold, // Peso de la fuente
-                color: Color.fromARGB(255, 255, 255, 255), // Color del texto
-              ),
-            ),
-            tileColor: Color.fromARGB(
-                255, 22, 103, 253), // Color de fondo del ListTile
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
-            ),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => DetalleBiotecnologiaMarron(),
-                ),
-              );
-            },
-          ),
-          Divider(
-            color: AppColor.pripmaryColor,
-          ),
-          ListTile(
-            title: Text(
-              'Biotecnología naranja o informativa.',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 14, // Tamaño de fuente
-
-                fontWeight: FontWeight.bold, // Peso de la fuente
-                color: Color.fromARGB(255, 255, 255, 255), // Color del texto
-              ),
-            ),
-            tileColor: Color.fromARGB(
-                255, 22, 103, 253), // Color de fondo del ListTile
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
-            ),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => DetalleBiotecnologiaNaranja(),
-                ),
-              );
-            },
-          ),
-          Divider(
-            color: AppColor.pripmaryColor,
-          ),
-          ListTile(
-            title: Text(
-              'Biotecnología amarilla o nutricional. ',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 14, // Tamaño de fuente
-
-                fontWeight: FontWeight.bold, // Peso de la fuente
-                color: Color.fromARGB(255, 255, 255, 255), // Color del texto
-              ),
-            ),
-            tileColor: Color.fromARGB(
-                255, 22, 103, 253), // Color de fondo del ListTile
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
-            ),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => DetalleBiotecnologiaAmarilla(),
-                ),
-              );
-            },
-          ),
-          Divider(
-            color: AppColor.pripmaryColor,
-          ),
-          ListTile(
-            title: Text(
-              'Biotecnología púrpura o legal.',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 14, // Tamaño de fuente
-
-                fontWeight: FontWeight.bold, // Peso de la fuente
-                color: Color.fromARGB(255, 255, 255, 255), // Color del texto
-              ),
-            ),
-            tileColor: Color.fromARGB(
-                255, 22, 103, 253), // Color de fondo del ListTile
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
-            ),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => DetalleBiotecnologiaPurpura(),
-                ),
-              );
-            },
-          ),
-          Divider(
-            color: AppColor.pripmaryColor,
-          ),
-          ListTile(
-            title: Text(
-              'Biotecnología negra o bélica.',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 14, // Tamaño de fuente
-
-                fontWeight: FontWeight.bold, // Peso de la fuente
-                color: Color.fromARGB(255, 255, 255, 255), // Color del texto
-              ),
-            ),
-            tileColor: Color.fromARGB(
-                255, 22, 103, 253), // Color de fondo del ListTile
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
-            ),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => DetalleBiotecnologiaNegra(),
-                ),
-              );
-            },
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class DetalleBiotecnologia extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Características'),
-      ),
-      backgroundColor: AppColor.pripmaryColor,
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                'Biotecnología roja o médica',
+            children: [
+              TextSpan(
+                text:
+                    'La historia de la biología genética se remonta a los inicios de la investigación científica y la curiosidad humana por comprender la herencia y la variación biológica. Aquí hay un breve resumen de algunos de los hitos más importantes en el desarrollo de esta disciplina:\n\n',
                 style: TextStyle(
-                    fontSize: 24.0,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.green),
-                textAlign: TextAlign.justify, // Justificar el texto
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                'La biotecnología roja o médica consiste en la obtención de sustancias y procedimientos que permitan la preservación de la vida humana, curando enfermedades o previniéndolas.',
-                style: TextStyle(fontSize: 16.0, color: Colors.white),
-                textAlign: TextAlign.justify,
-                // Justificar el texto
-              ),
-            ),
-            // Imagen centrada
-            Center(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Image.network(
-                  'https://scontent-mia3-1.xx.fbcdn.net/v/t39.30808-6/217836411_4051900398253318_8893724942211173322_n.png?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=OM8vYvj8DCoQ7kNvgHB-kcd&_nc_ht=scontent-mia3-1.xx&oh=00_AfDbtABIaT7N7jlts1I4cKg0vZB0CowvWsUGzNly8KOrKQ&oe=663D930C', // Cambia la ruta según la ubicación de tu imagen
-                  width:
-                      300, // Puedes ajustar el tamaño de la imagen según tus necesidades
-                  alignment: Alignment.center, // Centrar la imagen
+                  fontWeight: FontWeight.bold,
+                  color: Colors.green,
                 ),
               ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-//Biotecnología verde
-class DetalleBiotecnologiaVerde extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColor.pripmaryColor,
-      appBar: AppBar(
-        title: Text('Características'),
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                'Biotecnología verde o agrícola',
+              TextSpan(
+                text:
+                    'Siglos IV-V a.C.: Hipócrates, el médico griego, sugiere la idea de que la herencia se basa en la transmisión de rasgos de los progenitores a la descendencia.\n\n1850s-1860s: Gregor Mendel, un monje y científico austríaco, descubre las leyes básicas de la herencia a través de sus experimentos con guisantes. Estas leyes son conocidas como las leyes de Mendel.\n\n1869: Friedrich Miescher descubre el ácido nucleico, lo que más tarde se identificará como el componente genético fundamental, el ADN.\n\n1900s: El trabajo de William Bateson y Reginald Punnett contribuye al redescubrimiento de las leyes de Mendel y la introducción de conceptos como la dominancia y la recesividad.\n\n1902: Theodor Boveri y Walter Sutton proponen independientemente la teoría cromosómica de la herencia, en la que sugieren que los cromosomas son la base física de la herencia.\n\n1910s: Thomas Hunt Morgan y sus colegas trabajan con moscas de la fruta para demostrar que los genes se encuentran en cromosomas y descubren la importancia de la recombinación genética.\n\n1928: Frederick Griffith descubre el proceso de transformación en bacterias, lo que implica la transferencia de material genético entre organismos.\n\n1944: Oswald Avery, Colin MacLeod y Maclyn McCarty demuestran que el material genético transferido en el experimento de Griffith es ADN, lo que sugiere que el ADN es el portador de la información hereditaria.\n\n1951: James Watson, Francis Crick, Maurice Wilkins y Rosalind Franklin investigan la estructura del ADN, lo que lleva a la publicación de la famosa estructura en doble hélice en 1953.\n\n',
                 style: TextStyle(
-                    fontSize: 24.0,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.green),
-                textAlign: TextAlign.justify, // Justificar el texto
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                'Aquella que tiene que ver con el sector agropecuario de la cadena productiva y que busca incidir en la alimentación humana, a través de la obtención de especies más productivas, más resistentes o con nuevas propiedades adicionales.',
-                style: TextStyle(fontSize: 16.0, color: Colors.white),
-                textAlign: TextAlign.justify, // Justificar el texto
-              ),
-            ),
-            // Imagen centrada
-            Center(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Image.network(
-                  'https://img.freepik.com/fotos-premium/conceito-de-biotecnologia-verde-ou-grafico-de-biologia-sintetica-de-planta-combinada-com-forma-de-dna_756748-43473.jpg', // Cambia la ruta según la ubicación de tu imagen
-                  width:
-                      300, // Puedes ajustar el tamaño de la imagen según tus necesidades
-                  alignment: Alignment.center, // Centrar la imagen
+                  color: const Color.fromARGB(255, 255, 255, 255),
                 ),
               ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class DetalleBiotecnologiaAzul extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColor.pripmaryColor,
-      appBar: AppBar(
-        title: Text('Características'),
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                'Biotecnología azul o marina',
+              TextSpan(
+                text:
+                    'La genética es una rama de la biología que estudia cómo los caracteres hereditarios se transmiten de generación en generación.\n\nLos genes son las unidades de información que emplean los organismos para transferir un carácter a la descendencia. El gen contiene codificada las instrucciones para sintetizar todas las proteínas de un organismo. Estas proteínas son las que finalmente darán lugar a todos los caracteres de un individuo (fenotipo).',
                 style: TextStyle(
-                    fontSize: 24.0,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.green),
-                textAlign: TextAlign.justify, // Justificar el texto
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                'Se dedica a la exploración de los océanos y sus diversos ecosistemas como una fuente posible de materiales biotecnológicos de importancia.',
-                style: TextStyle(fontSize: 16.0, color: Colors.white),
-                textAlign: TextAlign.justify, // Justificar el texto
-              ),
-            ),
-            // Imagen centrada
-            Center(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Image.network(
-                  'https://cdn0.ecologiaverde.com/es/posts/5/6/5/biotecnologia_azul_que_es_y_para_que_sirve_4565_orig.jpg', // Cambia la ruta según la ubicación de tu imagen
-                  width:
-                      300, // Puedes ajustar el tamaño de la imagen según tus necesidades
-                  alignment: Alignment.center, // Centrar la imagen
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
                 ),
               ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class DetalleBiotecnologiaBlanca extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColor.pripmaryColor,
-      appBar: AppBar(
-        title: Text('Características'),
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                'Biotecnología blanca o industrial',
+              TextSpan(
+                text:
+                    '\n\nCada individuo tiene para cada carácter dos genes, uno que ha hereda de su padre y otro de su madre. Hay genes que son dominantes e imponen siempre la información que contienen. Otros, en cambio, son recesivos y en este caso sólo se expresan en ausencia de los genes dominantes. En otras ocasiones, la expresión o no depende del sexo del individuo; en este caso, se habla de genes ligados a sexo.\n\n',
                 style: TextStyle(
-                    fontSize: 24.0,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.green),
-                textAlign: TextAlign.justify, // Justificar el texto
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                'Es aquella que se interesa por la obtención de energía, materiales o catalizadores aprovechables por el ser humano, tales como biorreactores, biocombustibles, etc.',
-                style: TextStyle(fontSize: 16.0, color: Colors.white),
-                textAlign: TextAlign.justify, // Justificar el texto
-              ),
-            ),
-            // Imagen centrada
-            Center(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Image.network(
-                  'https://mercado.com.ar/wp/wp-content/uploads/2022/10/bio.png', // Cambia la ruta según la ubicación de tu imagen
-                  width:
-                      300, // Puedes ajustar el tamaño de la imagen según tus necesidades
-                  alignment: Alignment.center, // Centrar la imagen
+                  fontWeight: FontWeight.bold,
+                  color: Colors.green,
                 ),
               ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class DetalleBiotecnologiaGris extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColor.pripmaryColor,
-      appBar: AppBar(
-        title: Text('Características'),
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                'Biotecnología gris o ecológica.',
-                style: TextStyle(
-                    fontSize: 24.0,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.green),
-                textAlign: TextAlign.justify, // Justificar el texto
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                'A diferencia de las demás, su principal objetivo es la preservación del medio ambiente, a través del diseño y la producción de soluciones para desastres medioambientales, como la contaminación o los derrames petroleros, entre otros.',
-                style: TextStyle(fontSize: 16.0, color: Colors.white),
-                textAlign: TextAlign.justify, // Justificar el texto
-              ),
-            ),
-            // Imagen centrada
-            Center(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Image.network(
-                  'https://www.centrobiotecnologia.cl/wp-content/uploads/2019/11/biotecnologia-verde.jpg', // Cambia la ruta según la ubicación de tu imagen
-                  width:
-                      300, // Puedes ajustar el tamaño de la imagen según tus necesidades
-                  alignment: Alignment.center, // Centrar la imagen
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class DetalleBiotecnologiaDorada extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColor.pripmaryColor,
-      appBar: AppBar(
-        title: Text('Características'),
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                'Biotecnología dorada o informática.',
-                style: TextStyle(
-                    fontSize: 24.0,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.green),
-                textAlign: TextAlign.justify, // Justificar el texto
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                'Constituye el ala electrónica e informática de todos estos procesos, que se hermana con la computación para diseñar mecanismos de procesamiento de información de origen biológico.',
-                style: TextStyle(fontSize: 16.0, color: Colors.white),
-                textAlign: TextAlign.justify, // Justificar el texto
-              ),
-            ),
-            // Imagen centrada
-            Center(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Image.network(
-                  'https://0901.static.prezi.com/preview/v2/3hpk3nffipivqsdmwqgvjv3crt6jc3sachvcdoaizecfr3dnitcq_3_0.png', // Cambia la ruta según la ubicación de tu imagen
-                  width:
-                      300, // Puedes ajustar el tamaño de la imagen según tus necesidades
-                  alignment: Alignment.center, // Centrar la imagen
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class DetalleBiotecnologiaMarron extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColor.pripmaryColor,
-      appBar: AppBar(
-        title: Text('Características'),
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                'Biotecnología marrón o del desierto.',
-                style: TextStyle(
-                    fontSize: 24.0,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.green),
-                textAlign: TextAlign.justify, // Justificar el texto
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                'Al igual que la marina, comprende los desiertos como importantes fuentes de recursos biotecnológicos aprovechables por la humanidad.',
-                style: TextStyle(fontSize: 16.0, color: Colors.white),
-                textAlign: TextAlign.justify, // Justificar el texto
-              ),
-            ),
-            // Imagen centrada
-            Center(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Image.network(
-                  'https://imgv2-2-f.scribdassets.com/img/document/476834057/original/8273040261/1714397231?v=1', // Cambia la ruta según la ubicación de tu imagen
-                  width:
-                      300, // Puedes ajustar el tamaño de la imagen según tus necesidades
-                  alignment: Alignment.center, // Centrar la imagen
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class DetalleBiotecnologiaNaranja extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColor.pripmaryColor,
-      appBar: AppBar(
-        title: Text('Características'),
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                'Biotecnología naranja o informativa',
-                style: TextStyle(
-                    fontSize: 24.0,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.green),
-                textAlign: TextAlign.justify, // Justificar el texto
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                'Cumple con una función divulgativa y pedagógica, al transmitir de la mejor manera posible las actividades benéficas de la biotecnología, y también educar sobre sus riesgos.',
-                style: TextStyle(fontSize: 16.0, color: Colors.white),
-                textAlign: TextAlign.justify, // Justificar el texto
-              ),
-            ),
-            // Imagen centrada
-            Center(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Image.network(
-                  'https://img.freepik.com/vector-premium/biotecnologia-bioquimica-genetica-medicina-concepto_531521-231.jpg?w=1060', // Cambia la ruta según la ubicación de tu imagen
-                  width:
-                      300, // Puedes ajustar el tamaño de la imagen según tus necesidades
-                  alignment: Alignment.center, // Centrar la imagen
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class DetalleBiotecnologiaAmarilla extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColor.pripmaryColor,
-      appBar: AppBar(
-        title: Text('Características'),
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                'Biotecnología naranja o informativa',
-                style: TextStyle(
-                    fontSize: 24.0,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.green),
-                textAlign: TextAlign.justify, // Justificar el texto
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                'Aquella que se dedica a la industria alimentaria, o sea, a la obtención de alimentos más sanos, resistentes, nutritivos y/o sabrosos, mediante la incorporación de elementos de origen biológico.',
-                style: TextStyle(fontSize: 16.0, color: Colors.white),
-                textAlign: TextAlign.justify, // Justificar el texto
-              ),
-            ),
-            // Imagen centrada
-            Center(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Image.network(
-                  'https://elbiotecnologocurioso.com/wp-content/uploads/2020/04/biotecnologia-amarilla.png', // Cambia la ruta según la ubicación de tu imagen
-                  width:
-                      300, // Puedes ajustar el tamaño de la imagen según tus necesidades
-                  alignment: Alignment.center, // Centrar la imagen
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class DetalleBiotecnologiaPurpura extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColor.pripmaryColor,
-      appBar: AppBar(
-        title: Text('Características'),
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                'Biotecnología púrpura o legal.',
-                style: TextStyle(
-                    fontSize: 24.0,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.green),
-                textAlign: TextAlign.justify, // Justificar el texto
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                'Consiste en la rama legal, jurídica y ética del conjunto de la biotecnología, encargada de regular las actividades de las demás ramas para que se lleven a cabo de manera ética.',
-                style: TextStyle(fontSize: 16.0, color: Colors.white),
-                textAlign: TextAlign.justify, // Justificar el texto
-              ),
-            ),
-            // Imagen centrada
-            Center(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Image.network(
-                  'https://elbiotecnologocurioso.com/wp-content/uploads/2021/04/biotecnologia-violeta.png', // Cambia la ruta según la ubicación de tu imagen
-                  width:
-                      300, // Puedes ajustar el tamaño de la imagen según tus necesidades
-                  alignment: Alignment.center, // Centrar la imagen
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class DetalleBiotecnologiaNegra extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColor.pripmaryColor,
-      appBar: AppBar(
-        title: Text('Características'),
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                'Biotecnología negra o bélica.',
-                style: TextStyle(
-                    fontSize: 24.0,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.green),
-                textAlign: TextAlign.justify, // Justificar el texto
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                'La más peligrosa de todas y la más inmoral, es la que concierne al desarrollo de armas biológicas, destinadas a la guerra o al bioterrorismo. Sus consecuencias bien pueden ser catastróficas e impredecibles.',
-                style: TextStyle(fontSize: 16.0, color: Colors.white),
-                textAlign: TextAlign.justify, // Justificar el texto
-              ),
-            ),
-            // Imagen centrada
-            Center(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Image.network(
-                  'https://www.elciudadano.com/wp-content/uploads/2015/07/armas-bacteriologicas.jpg', // Cambia la ruta según la ubicación de tu imagen
-                  width:
-                      300, // Puedes ajustar el tamaño de la imagen según tus necesidades
-                  alignment: Alignment.center, // Centrar la imagen
-                ),
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
@@ -1039,55 +206,346 @@ Widget build(BuildContext context) {
 class UsosWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: RichText(
-          textAlign: TextAlign.justify,
-          text: TextSpan(
-            style: TextStyle(
-              fontSize: 16.0,
-              color: Colors.black,
-            ),
-            children: [
-              TextSpan(
-                text:
-                    'Cuáles son los campos de aplicación de la biotecnología?\n\n',
-                style:
-                    TextStyle(fontWeight: FontWeight.bold, color: Colors.green),
-              ),
-              TextSpan(
-                text:
-                    'El ser humano ha aprendido a usar, modificar y mejorar los organismos que le ofrece la naturaleza en función de sus necesidades. Es necesario saber los campos de aplicación de la biotecnología para saber en qué tipos de trabajos biotecnológicos nos vamos a enfocar. Principales aplicaciones de la biotecnología:\n\n',
-                style:
-                    TextStyle(color: const Color.fromARGB(255, 255, 255, 255)),
-              ),
-              TextSpan(
-                text:
-                    'Biosanitaria: para obtener fármacos, diagnosticar enfermedades, vacunas y terapias celulares, identidad molecular.\n\n',
-                style:
-                    TextStyle(color: const Color.fromARGB(255, 255, 255, 255)),
-              ),
-              TextSpan(
-                text:
-                    'Agrícola y ganadera: para desarrollar cultivos y mejorar cosechas y alimentos, además de conseguir resistir a plagas y enfermedades. Con herramientas y metodologías de biotecnología es posible reducir nuevas variedades de plantas con más rapidez que antes, con tolerancia a condiciones ambientales adversas, características nutricionales mejoradas, resistencia a herbicidas, plagas, etc. Se utiliza en los sistemas de diagnósticos de enfermedades; en uso de organismos vivos o sustancias producidas para mejorar la productividad de cultivos o control de plagas. También, en el cultivo de células y tejidos in vitro para producir plantas a gran escala; en cultivos genéticamente modificados; conservación de germoplasma; estudios de diversidad, evolución genética de poblaciones y programas para la mejora.\n\n',
-                style:
-                    TextStyle(color: const Color.fromARGB(255, 255, 255, 255)),
-              ),
-              TextSpan(
-                text:
-                    'Ambiental: como resistencia a la contaminación, conservar especies. Se aplica en el tratamiento de residuos líquidos contaminados, en el manejo de residuos sólidos, en la recuperación de metales, en el diagnóstico y detección de sustancias.\n\n',
-                style:
-                    TextStyle(color: const Color.fromARGB(255, 255, 255, 255)),
-              ),
-              TextSpan(
-                text:
-                    'Proceso industrial: Se aplica en sectores como la cosmética, la alimentación, los combustibles y las sustancias químicas. Ayuda a conseguir aditivos, saborizantes, colorantes, detergentes, alcohol carburante gracias a estos nuevos materiales inteligentes.\n\n',
-                style:
-                    TextStyle(color: const Color.fromARGB(255, 255, 255, 255)),
-              ),
-            ],
+    return Scaffold(
+      backgroundColor: AppColor.pripmaryColor,
+      body: ListView(
+        children: [
+          Divider(
+            color: AppColor.pripmaryColor,
           ),
+          ListTile(
+            title: Text(
+              'Diagnóstico de enfermedades genéticas',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 14, // Tamaño de fuente
+
+                fontWeight: FontWeight.bold, // Peso de la fuente
+                color: Color.fromARGB(255, 255, 255, 255), // Color del texto
+              ),
+            ),
+            // Estilo para el ListTile
+            tileColor: Color.fromARGB(
+                255, 22, 103, 253), // Color de fondo del ListTile
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
+            ),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DetalleGeneticaEnfermedades(),
+                ),
+              );
+            },
+          ),
+          Divider(
+            color: AppColor.pripmaryColor,
+          ),
+          ListTile(
+            title: Text(
+              'Personalización de tratamientos médicos',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 14, // Tamaño de fuente
+
+                fontWeight: FontWeight.bold, // Peso de la fuente
+                color: Color.fromARGB(255, 255, 255, 255), // Color del texto
+              ),
+            ),
+            tileColor: Color.fromARGB(
+                255, 22, 103, 253), // Color de fondo del ListTile
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
+            ),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DetalleGeneticaTratamientosGeneticos(),
+                ),
+              );
+            },
+          ),
+          Divider(
+            color: AppColor.pripmaryColor,
+          ),
+          ListTile(
+            title: Text(
+              'Terapias génicas',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 14, // Tamaño de fuente
+
+                fontWeight: FontWeight.bold, // Peso de la fuente
+                color: Color.fromARGB(255, 255, 255, 255), // Color del texto
+              ),
+            ),
+            tileColor: Color.fromARGB(
+                255, 22, 103, 253), // Color de fondo del ListTile
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
+            ),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DetalleGeneticasTerapias(),
+                ),
+              );
+            },
+          ),
+          Divider(
+            color: AppColor.pripmaryColor,
+          ),
+          ListTile(
+            title: Text(
+              'Desarrollo de vacunas',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 14, // Tamaño de fuente
+
+                fontWeight: FontWeight.bold, // Peso de la fuente
+                color: Color.fromARGB(255, 255, 255, 255), // Color del texto
+              ),
+            ),
+            tileColor: Color.fromARGB(
+                255, 22, 103, 253), // Color de fondo del ListTile
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
+            ),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DetalleGeneticaVacunas(),
+                ),
+              );
+            },
+          ),
+          Divider(
+            color: AppColor.pripmaryColor,
+          ),
+          ListTile(
+            title: Text(
+              'Predictor de riesgos',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 14, // Tamaño de fuente
+
+                fontWeight: FontWeight.bold, // Peso de la fuente
+                color: Color.fromARGB(255, 255, 255, 255), // Color del texto
+              ),
+            ),
+            tileColor: Color.fromARGB(
+                255, 22, 103, 253), // Color de fondo del ListTile
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0), // Bordes redondeados
+            ),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DetalleGeneticaPredictor(),
+                ),
+              );
+            },
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class DetalleGeneticaEnfermedades extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppColor.pripmaryColor,
+      appBar: AppBar(
+        title: Text('Características'),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Diagnóstico de enfermedades genéticas',
+                style: TextStyle(
+                    fontSize: 24.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.green),
+                textAlign: TextAlign.justify, // Justificar el texto
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Los avances en materia genética permiten desarrollar pruebas de diagnóstico precoz, nuevos tratamientos o intervenciones que van desde evitar la enfermedad hasta minimizar su gravedad. En concreto, la genética juega un papel crucial en el diagnóstico de enfermedades hereditarias. Los trastornos de este tipo se deben a mutaciones en un solo gen y la identificación de estas mutaciones permiten un diagnóstico preciso y temprano.',
+                style: TextStyle(fontSize: 16.0, color: Colors.white),
+                textAlign: TextAlign.justify, // Justificar el texto
+              ),
+            ),
+            // Imagen centrada
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class DetalleGeneticaTratamientosGeneticos extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppColor.pripmaryColor,
+      appBar: AppBar(
+        title: Text('Características'),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Personalización de tratamientos médicos',
+                style: TextStyle(
+                    fontSize: 24.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.green),
+                textAlign: TextAlign.justify, // Justificar el texto
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'La genética también está siendo utilizada para personalizar los tratamientos médicos. La identificación de los factores genéticos que influyen en la respuesta a los tratamientos permite a los médicos seleccionar la terapia más efectiva para cada paciente y conseguir mejores resultados con terapias más efectivas.',
+                style: TextStyle(fontSize: 16.0, color: Colors.white),
+                textAlign: TextAlign.justify, // Justificar el texto
+              ),
+            ),
+            // Imagen centrada
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class DetalleGeneticasTerapias extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppColor.pripmaryColor,
+      appBar: AppBar(
+        title: Text('Características'),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Terapias génicas',
+                style: TextStyle(
+                    fontSize: 24.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.green),
+                textAlign: TextAlign.justify, // Justificar el texto
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Las terapias génicas son una forma innovadora de tratar enfermedades genéticas. Consisten en la introducción de material genético modificado en las células del paciente con el objetivo de corregir la mutación responsable de la enfermedad. Aunque todavía se encuentra en fase experimental, estas terapias prometen ser una forma efectiva de tratar enfermedades genéticas en el futuro.',
+                style: TextStyle(fontSize: 16.0, color: Colors.white),
+                textAlign: TextAlign.justify, // Justificar el texto
+              ),
+            ),
+            // Imagen centrada
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class DetalleGeneticaVacunas extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppColor.pripmaryColor,
+      appBar: AppBar(
+        title: Text('Características'),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Desarrollo de vacunas',
+                style: TextStyle(
+                    fontSize: 24.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.green),
+                textAlign: TextAlign.justify, // Justificar el texto
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'La genética está siendo utilizada para el desarrollo de vacunas de una manera más efectiva y segura, incluyendo las vacunas basadas en ARN. Las vacunas genéticas se basan en la producción en laboratorio de proteínas antigénicas (proteínas capaces de generar una respuesta inmune) procedentes del virus. Según los expertos, la tecnología del ADN recombinante o corte y empalme de genes se podría aplicar a muchas enfermedades para las que en la actualidad no hay vacunas preventivas, tales como el SIDA o la malaria.',
+                style: TextStyle(fontSize: 16.0, color: Colors.white),
+                textAlign: TextAlign.justify, // Justificar el texto
+              ),
+            ),
+            // Imagen centrada
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class DetalleGeneticaPredictor extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppColor.pripmaryColor,
+      appBar: AppBar(
+        title: Text('Características'),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Predictor de riesgos',
+                style: TextStyle(
+                    fontSize: 24.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.green),
+                textAlign: TextAlign.justify, // Justificar el texto
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'La genética también puede ser utilizada para predecir el riesgo de desarrollar enfermedades genéticas y no genéticas. Esto puede ayudar a los médicos a tomar decisiones objetivas sobre la prevención y el tratamiento de estas enfermedades. En este sentido, estos últimos años han cobrado importancia los test genéticos, tanto para detectar la predisposición a padecer ciertas enfermedades hereditarias como para conocer ciertas alteraciones de la salud.',
+                style: TextStyle(fontSize: 16.0, color: Colors.white),
+                textAlign: TextAlign.justify, // Justificar el texto
+              ),
+            ),
+            // Imagen centrada
+          ],
         ),
       ),
     );
@@ -1107,7 +565,7 @@ class QuizzWidget extends StatelessWidget {
             color: Colors.white,
           ),
           Text(
-            'Quizz de Biotecnología',
+            'Quizz de Genética',
             style: TextStyle(
               fontSize: 24.0,
               color: Color.fromARGB(255, 199, 212, 75),
@@ -1120,7 +578,7 @@ class QuizzWidget extends StatelessWidget {
               Navigator.push(
                 // Utiliza Navigator.push para navegar a QuizzAnatomia
                 context,
-                MaterialPageRoute(builder: (context) => QuizzBiotecnologia()),
+                MaterialPageRoute(builder: (context) => Quizzgenetica1()),
               );
             },
             child: Text(
@@ -1135,7 +593,10 @@ class QuizzWidget extends StatelessWidget {
           SizedBox(height: 20), // Añade un espacio entre los botones
           ElevatedButton(
             onPressed: () {
-              // Lógica para redirigir a la segunda interfaz
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Quizzgenetica2()),
+              );
             },
             child: Text(
               'Nivel 2',
@@ -1149,7 +610,10 @@ class QuizzWidget extends StatelessWidget {
           SizedBox(height: 20), // Añade un espacio entre los botones
           ElevatedButton(
             onPressed: () {
-              // Lógica para redirigir a la tercera interfaz
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Quizzgenetica3()),
+              );
             },
             child: Text(
               'Nivel 3',

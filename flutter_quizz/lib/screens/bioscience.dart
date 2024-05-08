@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tiedepeli/screens/main_menu.dart';
 import 'package:tiedepeli/sciences/anatomia.dart';
 import 'package:tiedepeli/sciences/Genetica.dart';
 import 'package:tiedepeli/sciences/biotecnologia.dart';

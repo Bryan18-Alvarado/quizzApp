@@ -1,8 +1,4 @@
 import 'package:tiedepeli/model/questionModelAnatomiaNivel1.dart';
-import 'package:tiedepeli/model/question_model.dart';
-import 'package:tiedepeli/data/quizzBiotecnologia.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:flutter/material.dart';
 
 List<QuestionModelAnatomia1> questionsAnatomia = [
   QuestionModelAnatomia1(
@@ -14,7 +10,7 @@ List<QuestionModelAnatomia1> questionsAnatomia = [
       "Comparación entre diferentes especies.": false
     },
   ),
-    QuestionModelAnatomia1(
+  QuestionModelAnatomia1(
     "¿Quiénes fueron los primeros en realizar disecciones humanas sistemáticas?",
     {
       "Hipócrates y Galeno. ": false,
@@ -23,7 +19,7 @@ List<QuestionModelAnatomia1> questionsAnatomia = [
       "Leonardo da Vinci y Michelangelo.": false,
     },
   ),
-    QuestionModelAnatomia1(
+  QuestionModelAnatomia1(
     "¿Qué significó el fin de la tradición manuscrita en el desarrollo de la ilustración anatómica?",
     {
       "La introducción de mejores técnicas de grabado.": false,
@@ -32,7 +28,7 @@ List<QuestionModelAnatomia1> questionsAnatomia = [
       "La producción de reproducciones idénticas al original.": false
     },
   ),
-    QuestionModelAnatomia1(
+  QuestionModelAnatomia1(
     "¿Cuál es el significado etimológico de la palabra anatomía?",
     {
       "Corte horizontal de un organismo. ": true,
@@ -41,7 +37,7 @@ List<QuestionModelAnatomia1> questionsAnatomia = [
       "Comparación entre diferentes especies. ": false,
     },
   ),
-    QuestionModelAnatomia1(
+  QuestionModelAnatomia1(
     "¿Cuál de los siguientes artistas renacentistas fue más reconocido por su precisión anatómica?",
     {
       "Alberto Durero.": false,
@@ -50,7 +46,7 @@ List<QuestionModelAnatomia1> questionsAnatomia = [
       "Hieronymous Brunschwig.": false
     },
   ),
-    QuestionModelAnatomia1(
+  QuestionModelAnatomia1(
     "¿Cuál era la principal razón para la práctica de la disección humana en el pasado?",
     {
       "Conocer la causa de la muerte.": true,
@@ -59,7 +55,7 @@ List<QuestionModelAnatomia1> questionsAnatomia = [
       "Satisfacer la curiosidad científica.": false
     },
   ),
-    QuestionModelAnatomia1(
+  QuestionModelAnatomia1(
     "¿Qué sistema anatómico es responsable de la distribución de la sangre por el cuerpo?",
     {
       "Sistema nervioso.": false,
@@ -68,7 +64,7 @@ List<QuestionModelAnatomia1> questionsAnatomia = [
       "Aparato cardiovascular.": true
     },
   ),
-    QuestionModelAnatomia1(
+  QuestionModelAnatomia1(
     "¿Cuál de las siguientes áreas utiliza la anatomía para comprender la evolución y funcionamiento de los organismos?",
     {
       "Ingeniería civil.": false,
@@ -77,17 +73,17 @@ List<QuestionModelAnatomia1> questionsAnatomia = [
       "Historia del arte.": false
     },
   ),
-    QuestionModelAnatomia1(
+  QuestionModelAnatomia1(
     "¿Cuál de las siguientes ramas de la anatomía se dedica al estudio de la estructura interna de las plantas?",
     {
-       "Anatomía animal.": false,
+      "Anatomía animal.": false,
       "Anatomía humana.": false,
       "Anatomía comparada.": false,
       "Anatomía vegetal.": true
     },
   ),
-    QuestionModelAnatomia1(
-     "¿Qué texto de la antigüedad se considera como una de las primeras obras anatómicas?",
+  QuestionModelAnatomia1(
+    "¿Qué texto de la antigüedad se considera como una de las primeras obras anatómicas?",
     {
       "Margarita philosophica.": false,
       "De sepulturis.": false,
@@ -95,6 +91,4 @@ List<QuestionModelAnatomia1> questionsAnatomia = [
       "Fasciculus Medicinae.": true
     },
   ),
-
-
 ];

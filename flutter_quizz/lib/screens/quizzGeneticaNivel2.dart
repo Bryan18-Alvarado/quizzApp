@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:tiedepeli/data/quizzAnatomiaNivel1.dart';
+import 'package:tiedepeli/data/quizzGeneticaNivel2.dart';
 import 'package:tiedepeli/screens/result_screen.dart';
+import 'package:tiedepeli/screens/result_screenGenetica.dart';
 import 'package:tiedepeli/ui/shared/color.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class QuizzAnatomia1 extends StatefulWidget {
-  const QuizzAnatomia1({Key? key}) : super(key: key);
+class Quizzgenetica2 extends StatefulWidget {
+  const Quizzgenetica2({Key? key}) : super(key: key);
 
   @override
-  _QuizzAnatomiaState createState() => _QuizzAnatomiaState();
+  _QuizzBiotecnologiaState createState() => _QuizzBiotecnologiaState();
 }
 
-class _QuizzAnatomiaState extends State<QuizzAnatomia1> {
+class _QuizzBiotecnologiaState extends State<Quizzgenetica2> {
   int questionPos = 0;
   int score = 0;
   bool btnPressed = false;
@@ -37,7 +38,7 @@ class _QuizzAnatomiaState extends State<QuizzAnatomia1> {
           onPageChanged: (page) {
             setState(() {
               questionPos = page;
-              btnText = (page == questionsAnatomia.length - 1)
+              btnText = (page == questionsGeneticas2.length - 1)
                   ? "Ver resultados"
                   : "Siguiente Pregunta";
               answered = false;
@@ -52,7 +53,7 @@ class _QuizzAnatomiaState extends State<QuizzAnatomia1> {
                 SizedBox(
                   width: double.infinity,
                   child: Text(
-                    "Pregunta ${index + 1}/${questionsAnatomia.length}",
+                    "Pregunta ${index + 1}/${questionsGeneticas2.length}",
                     textAlign: TextAlign.start,
                     style: GoogleFonts.abel(
                       textStyle: Theme.of(context).textTheme.displayLarge,
@@ -69,9 +70,9 @@ class _QuizzAnatomiaState extends State<QuizzAnatomia1> {
                 ),
                 SizedBox(
                   width: double.infinity,
-                  height: 200.0,
+                  height: 100.0,
                   child: Text(
-                    "${questionsAnatomia[index].questionsAnatomia}",
+                    "${questionsGeneticas2[index].questionsGeneticaNivel2}",
                     style: GoogleFonts.adventPro(
                       textStyle: Theme.of(context).textTheme.displayLarge,
                       color: Colors.white,
@@ -80,11 +81,11 @@ class _QuizzAnatomiaState extends State<QuizzAnatomia1> {
                   ),
                 ),
                 for (int i = 0;
-                    i < questionsAnatomia[index].answers!.length;
+                    i < questionsGeneticas2[index].answers!.length;
                     i++)
                   Container(
                     width: double.infinity,
-                    height: 50.0,
+                    height: 60.0,
                     margin:
                         EdgeInsets.only(bottom: 20.0, left: 12.0, right: 12.0),
                     child: RawMaterialButton(
@@ -92,13 +93,16 @@ class _QuizzAnatomiaState extends State<QuizzAnatomia1> {
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                       fillColor: btnPressed
-                          ? questionsAnatomia[index].answers!.values.toList()[i]
+                          ? questionsGeneticas2[index]
+                                  .answers!
+                                  .values
+                                  .toList()[i]
                               ? Colors.green
                               : Colors.red
                           : AppColor.secondaryColor,
                       onPressed: !answered
                           ? () {
-                              if (questionsAnatomia[index]
+                              if (questionsGeneticas2[index]
                                   .answers!
                                   .values
                                   .toList()[i]) {
@@ -111,7 +115,7 @@ class _QuizzAnatomiaState extends State<QuizzAnatomia1> {
                             }
                           : null,
                       child: Text(
-                        questionsAnatomia[index].answers!.keys.toList()[i],
+                        questionsGeneticas2[index].answers!.keys.toList()[i],
                         style: GoogleFonts.alatsi(
                           textStyle: Theme.of(context).textTheme.displayLarge,
                           color: Colors.white,
@@ -126,11 +130,12 @@ class _QuizzAnatomiaState extends State<QuizzAnatomia1> {
                 RawMaterialButton(
                   onPressed: () {
                     if (_controller!.page?.toInt() ==
-                        questionsAnatomia.length - 1) {
+                        questionsGeneticas2.length - 1) {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => ResultScreen(score)));
+                              builder: (context) =>
+                                  ResultScreenGenetica(score)));
                     } else {
                       _controller!.nextPage(
                           duration: Duration(milliseconds: 250),
@@ -153,7 +158,7 @@ class _QuizzAnatomiaState extends State<QuizzAnatomia1> {
               ],
             );
           },
-          itemCount: questionsAnatomia.length,
+          itemCount: questionsGeneticas2.length,
         ),
       ),
     );

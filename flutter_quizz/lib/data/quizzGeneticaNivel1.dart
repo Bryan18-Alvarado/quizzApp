@@ -1,8 +1,6 @@
 import 'package:tiedepeli/model/questionModelGeneticaNivel1.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:flutter/material.dart';
 
-List<QuestionModelGeneticaNivel1> questionsGeneticas = [
+List<QuestionModelGeneticaNivel1> questionsGeneticas1 = [
   QuestionModelGeneticaNivel1(
     "¿La genética es el estudio de la herencia y la variación en los organismos?.",
     {
