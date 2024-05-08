@@ -64,7 +64,7 @@ class BiosciencePage extends StatelessWidget {
                       ),
                     ),
                     child: Text(
-                      "Biotecnologia",
+                      "Biotecnología",
                       style: TextStyle(color: Colors.black, fontSize: 24),
                     ),
                   ),
@@ -99,7 +99,7 @@ class BiosciencePage extends StatelessWidget {
                       ),
                     ),
                     child: Text(
-                      "Anatomia",
+                      "Anatomía",
                       style: TextStyle(color: Colors.black, fontSize: 24),
                     ),
                   ),
